@@ -1,0 +1,8 @@
+Préciser que la carte est sur la main page 
+préciser le filtrage 
+préciser liste fournie par le client 
+à la base donnée hardcodée en attendant la db 
+eclaircir / détaillé  les points importants des users stories /!\ /!\ /!\ /!\
+Critère d'acceptation des users stories 
+Trello : organisation
+éclaircir l'importance des users stories
