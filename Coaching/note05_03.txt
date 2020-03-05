@@ -1,7 +1,5 @@
 Pour le prochain coaching 
 
-CDC :
-faire des shémas du style des pages 
 -------------------------------------
 choix techno :
 déveloper les choix sql mariadb, postgre, mysql 
