@@ -1,0 +1,23 @@
+Pour le prochain coaching 
+
+CDC :
+dire que la description sera sans la db
+passage a la ligne pririté n2
+faire des choix (sans tenir compte du client en précisant que ça pourra peut être changer)
+expliquer l'interet de la carte sur deux onglet (différence entre les deux)
+Préciser que l'on devra récuperer la bdd du client et potentiellement la modifié 
+mettre un screen shot de la map 
+priorité 4 : changer le etc...
+faire des shémas du style des pages 
+-------------------------------------
+choix techno :
+déveloper les choix sql mariadb, postgre, mysql 
+à quoi sert react ? VS Angular VS js pure
+---------------------------------------
+Savoir utilisé la structure Django 
+---------------------------------------
+communiqué avec le serveur 
+échanger avec la db 
+
+--------------------------
+tester sur heroku, azure, aws,
