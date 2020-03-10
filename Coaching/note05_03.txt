@@ -1,14 +1,3 @@
 Pour le prochain coaching 
-
--------------------------------------
-choix techno :
-déveloper les choix sql mariadb, postgre, mysql 
-à quoi sert react ? VS Angular VS js pure
 ---------------------------------------
-Savoir utilisé la structure Django 
----------------------------------------
-communiqué avec le serveur 
-échanger avec la db 
-
---------------------------
 tester sur heroku, azure, aws,
