@@ -1,0 +1,11 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Page d'acceuil {% endblock %}
+
+{% block content %}  
+    <h1> Bienvenue </h1>
+
+    <h2> Map à venir </h2>
+
+    <p><a href="{% url 'pointBio:index' %}">Point biodiversité</a></p>
+{% endblock %}
