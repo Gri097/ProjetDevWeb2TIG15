@@ -20,7 +20,7 @@ déveloper les choix sql mariadb, postgre, mysql
 6) tester sur heroku, azure, aws,
 7) Faire des schemas des styles de pages
 
-Coaching n°3
+Coaching n°3 : Changement Ok
 ---------------------------------------
 1) Dire que les liens sont clicables pour priorite n°1
 2) Les points doivent être chercher depuis la base de données, à travers une api
