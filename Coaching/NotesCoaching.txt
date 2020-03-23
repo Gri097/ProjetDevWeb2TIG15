@@ -1,0 +1,44 @@
+Coaching n°1 : Changement OK
+---------------------------------------
+CDC :
+1) Dire que la description sera sans la db
+2) Passage a la ligne pririte n2
+3) Faire des choix (sans tenir compte du client en precisant que ca pourra peut etre changer)
+4) Expliquer l'interet de la carte sur deux onglet (difference entre les deux)
+5) Preciser que l'on devra recuperer la bdd du client et potentiellement la modifie
+6) Mettre un screen shot de la map 
+7) Priorite n°4 : changer le etc...
+
+Coaching n°2 : Changement Ok
+---------------------------------------
+1)choix techno :
+déveloper les choix sql mariadb, postgre, mysql 
+2) A quoi sert react ? VS Angular VS js pure
+3) Savoir utilisé la structure Django 
+4) Communique avec le serveur 
+5) Echanger avec la db 
+6) tester sur heroku, azure, aws,
+7) Faire des schemas des styles de pages
+
+Coaching n°3 : Changement Ok
+---------------------------------------
+1) Dire que les liens sont clicables pour priorite n°1
+2) Les points doivent être chercher depuis la base de données, à travers une api
+   !dans une autre user story
+3) Les catégories : dire si elles sont harcode, ou page dynamique 
+4) Utilisation d'une API pour la langue 
+5) Priorité n°2 : on utilise l'api OSM, et qu'en priorité n°1 c'est juste l'affichage
+   sans les points, en précisant la manière d'implémentation
+6) Priorité n°2 : Préciser qu'avec un retour on revient sur la carte sur la main page
+7) Informations sur la récuperation des infos sur les points de bio dans la db, préciser la requête url
+8) Compléter choix MariaDB; mariadb est libre de source contrairement à MySQL qui a ete racheté par Oracle 
+   et donc certaines licences sont payantes sur MySQL
+9) Ne pas dire les choix de colonnes dans le choix de db
+10) Prévoir une liste de question pour le client 
+
+coahcing n°4
+---------------------------------------
+1)Précision sur les catégories, dynamiques ou hardcode
+2)appel a l'api pour recuperer les points bios 
+3)modificatiuon du responsive en priorité 2
+4)schema Points biodiversité 
