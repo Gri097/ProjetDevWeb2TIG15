@@ -10,8 +10,8 @@ Etape 2)
 
 Insérez les commandes suivantes dans l'odre :
 
-source env/bin/activate
-cd src/
-python3 manage.py runserver
+- source env/bin/activate
+- cd src/
+- python3 manage.py runserver
 
 À cette étape le serveur devrait se lancer sans problème.
