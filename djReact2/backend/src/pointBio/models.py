@@ -14,7 +14,7 @@ class PointBio(models.Model):
         return self.title
 
 
-class Post(models.Model):
+class Famille(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
 
