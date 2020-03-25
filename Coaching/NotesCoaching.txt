@@ -36,9 +36,9 @@ Coaching n°3 : Changement Ok
 9) Ne pas dire les choix de colonnes dans le choix de db
 10) Prévoir une liste de question pour le client 
 
-coahcing n°4
+Coaching n°4 Changement OK 
 ---------------------------------------
 1)Précision sur les catégories, dynamiques ou hardcode
 2)appel a l'api pour recuperer les points bios 
 3)modificatiuon du responsive en priorité 2
-4)schema Points biodiversité 
+4)schema Points biodiversité (a faire)
