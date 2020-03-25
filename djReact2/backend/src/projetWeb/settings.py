@@ -41,8 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     # my apps
-    'pointBio',
-    'famille',
+    'biodiversite',
 ]
 
 MIDDLEWARE = [
@@ -82,7 +81,7 @@ WSGI_APPLICATION = 'biodiversite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test_db',
+        'NAME': 'biodiversite',
         'USER': 'root',
         'PASSWORD': 'password',
         'HOST': '127.0.0.1',
