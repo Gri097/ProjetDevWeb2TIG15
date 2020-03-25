@@ -42,3 +42,16 @@ Coaching n°4 Changement OK
 2)appel a l'api pour recuperer les points bios 
 3)modificatiuon du responsive en priorité 2
 4)schema Points biodiversité (a faire)
+
+Coaching n°5
+---------------------------------------
+1)liens dans le wiki des rapoport coaching et références 
+2)séparer les taches terminées (user stories/taches techniques) sur trello
+3)Renommer les colonnes trello 
+4)Mettre a jour les taches et activitée Clockify
+5)Utiliser des branches pour github, par caractéristiques (backend, frontend,...)
+
+
+
+
+
