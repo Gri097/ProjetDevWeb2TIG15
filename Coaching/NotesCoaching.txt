@@ -50,6 +50,7 @@ Coaching n°5
 3)Renommer les colonnes trello 
 4)Mettre a jour les taches et activitée Clockify
 5)Utiliser des branches pour github, par caractéristiques (backend, frontend,...)
+6)Documentation API
 
 
 
