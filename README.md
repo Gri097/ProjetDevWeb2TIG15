@@ -4,7 +4,7 @@ Pour lancer le serveur backend :
 
 Etape 1) 
 
-Se trouver dans le path "ProjetDevWeb2TIG/djReact2/backend"
+Se trouver dans le path "ProjetDevWeb2TIG/backend"
 
 Etape 2)
 
