@@ -14,9 +14,8 @@ class PointBio(models.Model):
         return self.title
 
 
-class Famille(models.Model):
-    title = models.CharField(max_length=255)
-    body = models.TextField()
+class Parcours(models.Model):
+    nom = models.CharField(max_length=255)
 
     def __str__(self):
-        return self.title
+        return self.nom

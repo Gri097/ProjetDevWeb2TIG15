@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from pointBio.models import PointBio
-from pointBio.models import Famille
+from pointBio.models import Parcours
 
 
 class PointBioSerializers(serializers.ModelSerializer):
@@ -10,7 +10,7 @@ class PointBioSerializers(serializers.ModelSerializer):
         fields = ('id', 'title', 'content',)
 
 
-class FamilleSerializers(serializers.ModelSerializer):
+class ParcoursSerializers(serializers.ModelSerializer):
     class Meta:
-        model = Famille
-        fields = ('title', 'body')
+        model = Parcours
+        fields = ('id', 'nom')
