@@ -14,19 +14,30 @@ class PointBiodiversite(models.Model):
     numeroParcours = models.PositiveIntegerField()
     ecorceRemarquable = models.BooleanField(default=False)
 
+    class Meta:
+        db_table = "pointBio"
+
     def __str__(self):
         return self.nomFr
 
 
 class Parcours(models.Model):
+    id = models.AutoField(primary_key=True)
     nom = models.CharField(max_length=255)
+
+    class Meta:
+        db_table = "parcours"
 
     def __str__(self):
         return self.nom
 
 
 class Famille(models.Model):
+    id = models.AutoField(primary_key=True)
     nom = models.CharField(max_length=255)
+
+    class Meta:
+        db_table = "familles"
 
     def __str__(self):
         return self.nom

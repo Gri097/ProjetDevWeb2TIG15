@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'projetDevWeb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_arbres_remarquables',
+        'NAME': 'db_arbres_remarquables', 
         'USER': 'root',
         'PASSWORD': 'password',
         'HOST': '127.0.0.1',
