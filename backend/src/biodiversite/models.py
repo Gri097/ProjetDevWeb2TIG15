@@ -25,10 +25,9 @@ class Famille(models.Model):
 
 
 class PointBiodiversite(models.Model):
-    idPoint = models.AutoField(primary_key=True)
-    nomFr = models.CharField(max_length=120)
     nomSc = models.CharField(max_length=120)
-    famille = models.ForeignKey(Famille, on_delete=models.CASCADE)
+    nomFr = models.CharField(max_length=120, blank=True)
+    famille = models.ForeignKey(Famille, on_delete=models.CASCADE, blank=True, null=True)
     parcours = models.ForeignKey(Parcours, on_delete=models.CASCADE)
     numeroParcours = models.PositiveIntegerField()
     ecorceRemarquable = models.BooleanField(default=False)
@@ -37,4 +36,4 @@ class PointBiodiversite(models.Model):
         db_table = "pointBio"
 
     def __str__(self):
-        return self.nomFr
+        return self.nomSc
