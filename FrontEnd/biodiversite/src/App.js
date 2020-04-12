@@ -3,6 +3,7 @@ import AllPointsBios from "./components/AllPointsBios";
 import Parcours from "./components/Parcours";
 import Acceuil from "./components/Acceuil";
 import Navigation from "./components/Nav";
+import MonCompte from "./components/monCompte";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 
@@ -21,6 +22,7 @@ class App extends Component{
                 <Route path="/" exact component={Acceuil}/>
                 <Route path="/parcours" exact component={Parcours}/>
                 <Route path="/pointBio" exact component={AllPointsBios}/>
+                <Route path="/compte" exact component={MonCompte}/>
 
             </Router>
 
