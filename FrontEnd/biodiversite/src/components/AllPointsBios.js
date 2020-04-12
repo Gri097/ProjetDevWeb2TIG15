@@ -12,7 +12,7 @@ class AllPointsBios extends Component{
             <div>
                 <h1> {this.props.title} </h1>
 
-                <p onCopy={this.noCopy}>Lorem ipsum</p>
+                <p onCopy={this.noCopy}></p>
 
                 <PointBio nomFr='Roses'>Arcadia</PointBio>
                 <PointBio>Caliptusas</PointBio>
