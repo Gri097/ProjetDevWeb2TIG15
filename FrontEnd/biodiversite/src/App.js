@@ -6,6 +6,7 @@ import Navigation from "./components/Nav";
 import MonCompte from "./components/monCompte";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component{
 
@@ -25,8 +26,6 @@ class App extends Component{
                 <Route path="/compte" exact component={MonCompte}/>
 
             </Router>
-
-
         </div>
     );
   }

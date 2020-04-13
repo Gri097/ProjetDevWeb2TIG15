@@ -3,20 +3,44 @@ import PointBio from "./PointBio";
 
 class AllPointsBios extends Component{
 
-    noCopy = () => {
-        alert('Merci de ne pas copier le text');
+    state ={
+        pointBio: [
+            {
+                id: 1,
+                nomSc: 'Salix alba cv. tristis',
+                nomFr: 'Rose',
+                famille: 'Salix'
+            },
+            {
+                id: 2,
+                nomSc: 'Acer pensylvanicum',
+                nomFr: 'Blanche',
+                famille: 'Acer'
+            },
+            {
+                id: 3,
+                nomSc: 'Cupressus Sempervirens',
+                nomFr: 'Caliptus',
+                famille: 'Quentum'
+            }
+        ]
     }
 
     render() {
+
         return (
             <div>
-                <h1> {this.props.title} </h1>
+                <h1 > Points Biodiversités disponible </h1>
 
-                <p onCopy={this.noCopy}></p>
+                {this.state.pointBio.map(pointBio =>(
+                    <PointBio
+                        key={pointBio.id}
+                        nomFr={pointBio.nomFr}
+                        nomSc={pointBio.nomSc}
+                        famille={pointBio.famille}
+                    />
+                ))}
 
-                <PointBio nomFr='Roses'>Arcadia</PointBio>
-                <PointBio>Caliptusas</PointBio>
-                <PointBio nomFr='Blanche'>Quentum</PointBio>
             </div>
         )
     }
