@@ -4,6 +4,7 @@ import Parcours from "./components/Parcours";
 import Acceuil from "./components/Acceuil";
 import Navigation from "./components/Nav";
 import MonCompte from "./components/monCompte";
+import TestApi from "./components/TestApi"
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -17,7 +18,20 @@ class App extends Component{
   render() {
     return (
         <div className="App">
-            <Router>
+
+
+            <TestApi></TestApi>
+
+        </div>
+    );
+  }
+}
+
+export default App;
+// <AllPointsBios title={this.state.titre}/>
+/*
+*
+<Router>
                 <Navigation/>
 
                 <Route path="/" exact component={Acceuil}/>
@@ -26,10 +40,5 @@ class App extends Component{
                 <Route path="/compte" exact component={MonCompte}/>
 
             </Router>
-        </div>
-    );
-  }
-}
-
-export default App;
-// <AllPointsBios title={this.state.titre}/>
+*
+* */

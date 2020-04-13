@@ -9,7 +9,7 @@ function Navigation() {
 
 
                     <ul style={{float:""}} className="navbar-nav mr-auto">
-                        
+
                         <Link to="/" className="navbar-brand">
                             <li style={{marginLeft: 10, listStyle: 'none'}}>Acceuil</li>
                         </Link>
