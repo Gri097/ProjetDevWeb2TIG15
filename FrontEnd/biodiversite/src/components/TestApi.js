@@ -21,13 +21,23 @@ function TestApi() {
 
     return(
       <Fragment>
-          <ul>
               {data.map(item => (
-                  <li key={item.id}>
-                      <p>{item.nomSc}</p>
-                  </li>
+                      <div key={item.id}>
+                          <p>Nom Scientifique: {item.nomSc}</p>
+                            {
+                                item.nomFr == "" ?(
+                                     <p>Nom Français: Inconnu</p>):
+                                     <p>Nom Français: {item.nomFr}</p>
+                            }
+                          {
+                              item.famille ?(
+                                      <p>Famille: {item.famille}</p>):
+                                  <p>Famille: {item.famille_id}</p>
+                          }
+                        <br/>
+
+                      </div>
               ))}
-          </ul>
       </Fragment>
     );
 }

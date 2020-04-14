@@ -4,25 +4,25 @@ import {Link} from "react-router-dom";
 function Navigation() {
 
     return(
-        <div className="navbar navbar-expand-sm navbar-dark bg-success mb-3 py-0">
-            <h1 className="">Louvain-La-Neuve Biodiversité</h1>
+        <div className="header">
+            <h1 className="navTitle">Louvain-La-Neuve Biodiversité</h1>
 
 
-                    <ul style={{float:""}} className="navbar-nav mr-auto">
+            <ul className="allList">
 
-                        <Link to="/" className="navbar-brand">
-                            <li style={{marginLeft: 10, listStyle: 'none'}}>Acceuil</li>
-                        </Link>
-                        <Link to="/parcours" className="navbar-brand">
-                            <li style={{marginLeft: 10, listStyle: 'none'}}>Parcous</li>
-                        </Link>
-                        <Link to="/pointBio" className="navbar-brand">
-                            <li style={{marginLeft: 10, listStyle: 'none'}}>Points Biodiversités</li>
-                        </Link>
-                        <Link to="/compte" className="navbar-brand">
-                            <li style={{marginLeft: 10, listStyle: 'none'}}>Mon compte</li>
-                        </Link>
-                    </ul>
+                <Link to="/" className="">
+                    <li className="list">Acceuil</li>
+                </Link>
+                <Link to="/parcours" className="">
+                    <li className="list">Parcous</li>
+                </Link>
+                <Link to="/pointBio" className="">
+                    <li className="list">Points Biodiversités</li>
+                </Link>
+                <Link to="/compte" className="">
+                    <li className="list">Mon compte</li>
+                </Link>
+            </ul>
 
 
 
@@ -35,3 +35,7 @@ function Navigation() {
 }
 
 export default Navigation;
+
+/*
+
+* */

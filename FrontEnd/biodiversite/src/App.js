@@ -7,21 +7,24 @@ import MonCompte from "./components/monCompte";
 import TestApi from "./components/TestApi"
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
+//import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component{
-
-    state = {
-        titre : 'Louvain-La-Neuve Biodiversité'
-    }
 
   render() {
     return (
         <div className="App">
-
-
-            <TestApi></TestApi>
-
+            <Router>
+                <div className="outer">
+                    <Navigation/>
+                    <div className="inner">
+                        <Route path="/" exact component={Acceuil}/>
+                        <Route path="/parcours" exact component={Parcours}/>
+                        <Route path="/pointBio" exact component={AllPointsBios}/>
+                        <Route path="/compte" exact component={MonCompte}/>
+                    </div>
+                </div>
+            </Router>
         </div>
     );
   }
@@ -29,16 +32,4 @@ class App extends Component{
 
 export default App;
 // <AllPointsBios title={this.state.titre}/>
-/*
-*
-<Router>
-                <Navigation/>
-
-                <Route path="/" exact component={Acceuil}/>
-                <Route path="/parcours" exact component={Parcours}/>
-                <Route path="/pointBio" exact component={AllPointsBios}/>
-                <Route path="/compte" exact component={MonCompte}/>
-
-            </Router>
-*
-* */
+//<TestApi></TestApi>
