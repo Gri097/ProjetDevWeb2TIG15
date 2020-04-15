@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-
+import {Link} from "react-router-dom";
 
 
 class PointBio extends Component {
 
     state = {
-        show: true
+        show: false
     }
 
 
@@ -16,13 +16,17 @@ class PointBio extends Component {
     }
 
     render() {
-
         return (
-            <div className="card card-body mb-3">
-                <h4>
-                    {this.props.nomSc}&nbsp;
+            <div>
 
-                    <button onClick={this.montrerPoint} style={{cursor: 'pointer', color: 'red'}}></button>
+                <h4>
+                    <Link to={`/pointBio/${this.props.id}`} style={{textDecoration:'none', color:'black'}}>
+                        {this.props.nomSc}&nbsp;
+                    </Link>
+
+
+                    <button onClick={this.montrerPoint} className="pointBioButton">
+                    </button>
                 </h4>
                 {this.state.show ?(
                     <ul className="list-group">
@@ -30,7 +34,7 @@ class PointBio extends Component {
                             Nom français: {this.props.nomFr}
                         </li>
                         <li className="list-group-item">
-                            Famille: {this.props.famille}
+                            Famille: {this.props.family}
                         </li>
                     </ul>
                 ) : null }
