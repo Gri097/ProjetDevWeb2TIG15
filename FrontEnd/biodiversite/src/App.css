@@ -1,66 +1,28 @@
-
-
-.App{
+/*
+html{
   background-color: #78C767;
+  background-color: #8CDC7A;
+}
+ */
+.App{
   position:absolute;
   top:0;
   left:0;
   height:100%;
   width:100%;
-
+  background-color: #78C767;
   padding-bottom:40px;
   overflow:hidden;
 }
-.outer{
-  background:white;
+.outer
+{
   margin:0px auto;
-  width:100%;
   height:100%;
 }
-div.header{
-  position: page;
-  background-color: #78C767;
-  width:100%;
-  height: 120px;
-}
-li.list{
-  display: inline;
-  float: left;
-  display: block;
-  padding: 8px;
-  background-color: #78C767;
-
-  color: #f1f1f1;
-  text-align: center;
-  padding: 14px 126px;
-  text-decoration: none;
-}
-
-li:hover{
-  background-color: #8CDC7A;
-}
-
-ul.allList{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #78C767;
-
-}
-
-.inner{
-  margin: 0px;
-  min-width: 480px;
+.inner
+{
+  width: 100%;
   height: 100%;
-  background: white;
-  padding: 0 0 64px 0;
-  text-align: center;
+  background:white;
+  padding: 30px 0 64px 20px;
 }
-
-h1.navTitle{
-  text-align: center;
-  color: #f1f1f1;
-}
-
-

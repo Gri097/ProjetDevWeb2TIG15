@@ -15,6 +15,31 @@ class App extends Component{
     return (
         <div className="App">
             <Router>
+
+                <div className="outer">
+                    <Navigation/>
+
+                    <div className="inner">
+                        <Route path="/" exact component={Acceuil}/>
+                        <Route path="/parcours" exact component={Parcours}/>
+                        <Route path="/pointBio" exact component={AllPointsBios}/>
+                        <Route path="/compte" exact component={MonCompte}/>
+                    </div>
+                </div>
+
+
+
+            </Router>
+        </div>
+    );
+  }
+}
+
+export default App;
+// <AllPointsBios title={this.state.titre}/>
+//<TestApi></TestApi>
+/*
+            <Router>
                 <div className="outer">
                     <Navigation/>
                     <div className="inner">
@@ -25,11 +50,4 @@ class App extends Component{
                     </div>
                 </div>
             </Router>
-        </div>
-    );
-  }
-}
-
-export default App;
-// <AllPointsBios title={this.state.titre}/>
-//<TestApi></TestApi>
+*/
