@@ -43,7 +43,7 @@ Coaching n°4 Changement OK
 3)modificatiuon du responsive en priorité 2
 4)schema Points biodiversité (a faire)
 
-Coaching n°5
+Coaching n°5 Changement PAS OK
 ---------------------------------------
 1)liens dans le wiki des rapoport coaching et références 
 2)séparer les taches terminées (user stories/taches techniques) sur trello
@@ -51,6 +51,17 @@ Coaching n°5
 4)Mettre a jour les taches et activitée Clockify
 5)Utiliser des branches pour github, par caractéristiques (backend, frontend,...)
 6)Documentation API
+
+Coaching n°6 Changement PAS OK
+---------------------------------------
+1)ecrire dans usrs stories les api utilisées/nécessaires
+2)Screenshot priorité2 de la page Point Bio
+  +Exemple de url a faire 
+3)Screenshot priorité 3 
+4)Rajouter n° user stories sur trello 
+5)Mettre a jour utilisation Trello 
+6)Afficher de faux points sur carte depuis la base de donnée 
+
 
 
 
