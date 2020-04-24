@@ -19,4 +19,4 @@ class PointBiodiversiteSerializers(serializers.ModelSerializer):
     class Meta:
         model = PointBiodiversite
         fields = ('id', 'nomSc', 'nomFr', 'famille_id',
-                  'parcours_id', 'numeroParcours', 'ecorceRemarquable')
+                  'parcours_id', 'numeroParcours', 'ecorceRemarquable', 'lat', 'lng')

@@ -31,6 +31,9 @@ class PointBiodiversite(models.Model):
     parcours = models.ForeignKey(Parcours, on_delete=models.CASCADE)
     numeroParcours = models.PositiveIntegerField()
     ecorceRemarquable = models.BooleanField(default=False)
+    lat = models.DecimalField(decimal_places=6, max_digits=8, null=True)
+    lng = models.DecimalField(decimal_places=6, max_digits=8, null=True)
+    
 
     class Meta:
         db_table = "pointBio"
