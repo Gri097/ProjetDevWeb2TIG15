@@ -8,11 +8,14 @@ insert into parcours values (3, 'Parcours du lac');
 insert into parcours values (4, 'Parcours du jardin botanique');
 insert into parcours values (5, 'Parcours du parc de Moulinsart');
 
-insert into pointBio values (1, "Salix alba cv. tristis","",1,1,1,1);
-insert into pointBio values (2, "Acer pensylvanicum","",2,1,2,1);
-insert into pointBio values (3,"Cupressus Sempervirens","",3,1,null,1);
-insert into pointBio values (4,"Carya illinonensis","",4,1,null,1);
-insert into pointBio values (5, "Taxus baccata","",5,1,null,1);
+//TABLE POINTBIO :
+
+insert into pointBio values (1, "Salix alba cv. tristis","",1,1,1,1,50.669303,4.620818);
+insert into pointBio values (2, "Acer pensylvanicum","",2,1,2,1,50.669199, 4.620844);
+insert into pointBio values (3,"Cupressus Sempervirens","",3,1,null,1,null,null);
+insert into pointBio values (4,"Carya illinonensis","",4,1,null,1,50.669722, 4.621585);
+insert into pointBio values (5, "Taxus baccata","",5,1,null,1,50.669494, 4.621766);
+
 insert into pointBio values (6, "Picea omorika","",6,1,null,1);
 insert into pointBio values (7, "Ulmus minor","",7,1,null,1);
 insert into pointBio values (8, "Acer capillipes","",8,1,2,1);
