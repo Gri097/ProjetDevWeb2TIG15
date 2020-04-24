@@ -6,6 +6,7 @@ import MonCompte from "./components/monCompte";
 import PointsBios from "./components/PointsBios";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
+import 'leaflet/dist/leaflet.css';
 //import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component{
@@ -27,9 +28,15 @@ class App extends Component{
                 </div>
 
             </Router>
+
+
         </div>
     );
   }
 }
 
 export default App;
+
+/*
+
+* */

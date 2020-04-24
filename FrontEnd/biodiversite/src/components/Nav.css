@@ -27,3 +27,6 @@ li.list{
 li.list:hover{
     background-color: #8CDC7A;
 }
+li.list:hover.is-active{
+    background-color: #8CDC7A;
+}

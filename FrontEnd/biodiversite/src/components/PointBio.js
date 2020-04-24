@@ -16,6 +16,7 @@ class PointBio extends Component {
     }
 
     render() {
+
         return (
             <div>
 
@@ -28,11 +29,16 @@ class PointBio extends Component {
                     <button onClick={this.montrerPoint} className="pointBioButton">
                     </button>
                 </h4>
+                {/*
+                Ici on regarde si le state show est true ou false --> pour afficher le détail ou non
+                Ensuite si il ne possède pas de nom français, cela est remplacé par "Inconnu"
+                */}
                 {this.state.show ?(
                     <ul className="list-group">
-                        <li className="list-group-item">
-                            Nom français: {this.props.nomFr}
-                        </li>
+                        {this.props.nomFr === "" ?
+                            (<li className="list-group-item" >Nom français : Inconnu</li>) :
+                            (<li className="list-group-item">Nom français: {this.props.nomFr}</li>)
+                        }
                         <li className="list-group-item">
                             Famille: {this.props.family}
                         </li>
