@@ -16,13 +16,9 @@ function PointsBios(){
             setPointsBios(pointsBiosAPI.data);
             setFamilles(famillesAPI.data);
             setParcours(parcoursAPI.data);
-            console.log(famillesAPI.data)
-            console.log(parcoursAPI.data);
-            console.log(pointsBiosAPI.data)
         };
         fetchData();
     }, [])
-
 
 return(
 
@@ -33,10 +29,14 @@ return(
             <PointBio
                 id={item.id}
                 key={item.id}
-                nomFr={item.nomFr}
-                nomSc={item.nomSc}
-                {{}}
-                famille={item.family}
+                nomFranc={item.nomFr}
+                nomScien={item.nomSc}
+                famille={item.famille_id}
+                parcours={item.parcours_id}
+                numParcours={item.numeroParcours}
+                remarquable={item.ecorceRemarquable}
+                allFamilles={[familles, setFamilles][0]}
+                allParcours={[parcours, setParcours][0]}
             />
         ))}
     </Fragment>
