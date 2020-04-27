@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import Parcours from "./components/Parcours";
 import Acceuil from "./components/Acceuil";
 import Navigation from "./components/Nav";
@@ -7,11 +7,21 @@ import PointsBios from "./components/PointsBios";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import 'leaflet/dist/leaflet.css';
+import axios from "axios";
 //import 'bootstrap/dist/css/bootstrap.min.css'
 
-class App extends Component{
+function App(){
 
-  render() {
+    const [pointsBios, setPointsBios] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const pointsBiosAPI = await axios('http://localhost:8000/api/pointBiodiversite/?format=json');
+            setPointsBios(pointsBiosAPI.data);
+        };
+        fetchData();
+    },[])
+
     return (
         <div className="App">
             <Router>
@@ -32,11 +42,7 @@ class App extends Component{
 
         </div>
     );
-  }
+
 }
 
 export default App;
-
-/*
-
-* */

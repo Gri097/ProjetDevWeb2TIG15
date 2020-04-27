@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 class PointBio extends Component {
 
     state = {
-        show: true
+        show: false
     }
 
 
