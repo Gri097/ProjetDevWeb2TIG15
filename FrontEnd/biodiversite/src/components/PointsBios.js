@@ -28,6 +28,7 @@ return(
         {pointsBios.map(item => (
             <PointBio
                 id={item.id}
+                key={item.id}
                 nomFranc={item.nomFr}
                 nomScien={item.nomSc}
                 famille={item.famille_id}

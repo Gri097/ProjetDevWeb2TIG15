@@ -1,7 +1,7 @@
 import React, {Fragment, useState, useEffect} from "react";
 import axios from 'axios';
 import PointMap from './PointMap';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Map, TileLayer } from 'react-leaflet';
 import './Acceuil.css';
 import L from "leaflet";
 
