@@ -47,20 +47,20 @@ Coaching n°5 Changement PAS OK
 ---------------------------------------
 1)liens dans le wiki des rapoport coaching et références 
 2)séparer les taches terminées (user stories/taches techniques) sur trello 				---OK---
-3)Renommer les colonnes trello 																										---OK---
-4)Mettre a jour les taches et activitée Clockify																	---OK---
+3)Renommer les colonnes trello 										---OK---
+4)Mettre a jour les taches et activitée Clockify							---OK---
 5)Utiliser des branches pour github, par caractéristiques (backend, frontend,...)
 6)Documentation API
 
 Coaching n°6 Changement PAS OK
 ---------------------------------------
-1)ecrire dans usrs stories les api utilisées/nécessaires													---OK---
+1)ecrire dans usrs stories les api utilisées/nécessaires						---OK---
 2)Screenshot priorité2 de la page Point Bio
   +Exemple de url a faire 
 3)Screenshot priorité 3 
-4)Rajouter n° user stories sur trello 																						---OK---
-5)Mettre a jour utilisation Trello 																								---OK---
-6)Afficher de faux points sur carte depuis la base de donnée 											---OK---
+4)Rajouter n° user stories sur trello									---OK---
+5)Mettre a jour utilisation Trello									---OK---
+6)Afficher de faux points sur carte depuis la base de donnée 						---OK---
 
 
 
