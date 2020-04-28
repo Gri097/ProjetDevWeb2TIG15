@@ -39,17 +39,19 @@ function App(){
                         <Route path="/pointBio" exact component={PointsBios}/>
 
                         {pointsBios.map(item => (
-                            <Route path={`/pointBio/${item.id}`} exact component={PointBioDetail}
-                                   id={item.id}
+                            <Route path={`/pointBio/${item.id}`}
+                                   exact component={(props) => <PointBioDetail {...props}
+                                                                               id={item.id}
+                                                                               nomFranc={item.nomFr}
+                                                                               nomScien={item.nomSc}
+                                                                               famille={item.famille_id}
+                                                                               parcours={item.parcours_id}
+                                                                               numParcours={item.numeroParcours}
+                                                                               remarquable={item.ecorceRemarquable}
+                                                                               lat={item.lat}
+                                                                               lng={item.lng}
+                                                                />}
                                    key={item.id}
-                                   nomFranc={item.nomFr}
-                                   nomScien={item.nomSc}
-                                   famille={item.famille_id}
-                                   parcours={item.parcours_id}
-                                   numParcours={item.numeroParcours}
-                                   remarquable={item.ecorceRemarquable}
-                                   lat={item.lat}
-                                   lng={item.lng}
                             />
                         ))}
 
