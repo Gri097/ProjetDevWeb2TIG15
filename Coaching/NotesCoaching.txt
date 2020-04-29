@@ -62,6 +62,11 @@ Coaching n°6 Changement PAS OK
 5)Mettre a jour utilisation Trello									---OK---
 6)Afficher de faux points sur carte depuis la base de donnée 						---OK---
 
+Coaching n°7 Changement PAS OK 
+----------------------------------------
+1) sécurité 
+2) Maquette us 3
+3) Mieux détaillé les 3eres UserStory
 
 
 
