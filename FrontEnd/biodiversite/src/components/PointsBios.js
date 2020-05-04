@@ -9,9 +9,9 @@ function PointsBios(){
 
     useEffect(() => {
         const fetchData = async () => {
-            const pointsBiosAPI = await axios('http://localhost:8000/api/pointBiodiversite/?format=json');
-            const famillesAPI = await axios('http://localhost:8000/api/famille/?format=json');
-            const parcoursAPI = await axios('http://localhost:8000/api/parcours/?format=json');
+            const pointsBiosAPI = await axios('http://10.0.1.82:8000/api/pointBiodiversite/?format=json');
+            const famillesAPI = await axios('http://10.0.1.82:8000/api/famille/?format=json');
+            const parcoursAPI = await axios('http://10.0.1.82:8000/api/parcours/?format=json');
 
             setPointsBios(pointsBiosAPI.data);
             setFamilles(famillesAPI.data);

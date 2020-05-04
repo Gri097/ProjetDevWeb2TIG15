@@ -17,7 +17,7 @@ function App(){
 
     useEffect(() => {
         const fetchData = async () => {
-            const pointsBiosAPI = await axios('http://localhost:8000/api/pointBiodiversite/?format=json');
+            const pointsBiosAPI = await axios('http://10.0.1.82:8000/api/pointBiodiversite/?format=json');
             setPointsBios(pointsBiosAPI.data);
         };
         fetchData();
