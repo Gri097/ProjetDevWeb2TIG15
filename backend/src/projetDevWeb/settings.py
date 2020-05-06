@@ -25,7 +25,7 @@ SECRET_KEY = 'fxq4kdq3d0gi74xeg&59n5xpr49q&8p!272ndl(je3yq&eaugf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'biodiversite',
+    'rest_framework_swagger',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ WSGI_APPLICATION = 'projetDevWeb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test', #db_arbres_remarquables 
+        'NAME': 'db_arbres_remarquables', #db_arbres_remarquables 
         'USER': 'root',
         'PASSWORD': 'password',
         'HOST': '127.0.0.1',
@@ -131,9 +132,11 @@ STATIC_URL = '/static/'
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
+    ],
+    
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
