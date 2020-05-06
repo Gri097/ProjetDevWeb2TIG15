@@ -52,20 +52,20 @@ Coaching n°5 Changement PAS OK
 5)Utiliser des branches pour github, par caractéristiques (backend, frontend,...)
 6)Documentation API
 
-Coaching n°6 Changement PAS OK
+Coaching n°6 Changement OK
 ---------------------------------------
-1)ecrire dans usrs stories les api utilisées/nécessaires						---OK---
+1)ecrire dans usrs stories les api utilisées/nécessaires						
 2)Screenshot priorité2 de la page Point Bio
   +Exemple de url a faire 
 3)Screenshot priorité 3 
-4)Rajouter n° user stories sur trello									---OK---
-5)Mettre a jour utilisation Trello									---OK---
-6)Afficher de faux points sur carte depuis la base de donnée 						---OK---
+4)Rajouter n° user stories sur trello									
+5)Mettre a jour utilisation Trello									
+6)Afficher de faux points sur carte depuis la base de donnée 						
 
 Coaching n°7 Changement PAS OK 
 ----------------------------------------
 1) sécurité 
-2) Maquette us 3
+2) Maquette us 3											---OK---
 3) Mieux détaillé les 3eres UserStory
 
 
