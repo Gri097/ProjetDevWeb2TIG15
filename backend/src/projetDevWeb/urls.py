@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.urls import path, include
 from django.contrib import admin
+from rest_framework_swagger.views import get_swagger_view
+
+schema_view = get_swagger_view(title='Biodiversité LLN API')
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('api/', include('biodiversite.api.urls')),
+    path('',schema_view),
 ]
