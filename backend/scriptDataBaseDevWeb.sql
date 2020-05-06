@@ -178,5 +178,5 @@ insert into pointBio values (156, "Aesculus x carnea", "", 2, 1,  null, 5, 50.66
 insert into pointBio values (157, "Ulmus minor", "", 3, 1,  null, 5, 50.660710, 4.608406);
 insert into pointBio values (158, "Sequoiadendron giganteum", "", 4, 1,  null, 5, 50.660592, 4.607940);
 insert into pointBio values (159, "Quercus dentata cv. yunnanensis", "", 5, 1,  3, 5, 50.660998, 4.607538);
-insert into pointBio values (160, "Robinia pseudoacacia", "Robinier faux-acacia", 6, 1,  null, 5, 50.660983, 4.606725);
+insert into pointBio values (160, "Robinia pseudoacacia", "Robinier faux-acacia", 6, 1,  null, 5, 50.660983, 4.606725des );
 
