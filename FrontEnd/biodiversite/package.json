@@ -11,6 +11,7 @@
     "err": "^2.1.11",
     "error-ex": "git+https://github.com/Qix-/node-error-ex.git",
     "leaflet": "^1.6.0",
+    "leaflet-routing-machine": "^3.2.12",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-leaflet": "^2.6.3",

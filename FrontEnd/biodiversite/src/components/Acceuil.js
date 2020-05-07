@@ -3,7 +3,8 @@ import axios from 'axios';
 import PointMap from './PointMap';
 import { Map, TileLayer } from 'react-leaflet';
 import './Acceuil.css';
-
+import 'leaflet-routing-machine';
+import L from 'leaflet';
 
 function Acceuil() {
 
@@ -24,31 +25,38 @@ function Acceuil() {
     }
     const position = [base.lat, base.lng]
 
+
     const pointMap = pointsBios.map(item => (
-                        <PointMap
-                            id={item.id}
-                            key={item.id}
-                            nomFranc={item.nomFr}
-                            nomScien={item.nomSc}
-                            famille={item.famille_id}
-                            parcours={item.parcours_id}
-                            numParcours={item.numeroParcours}
-                            remarquable={item.ecorceRemarquable}
-                            lat={item.lat}
-                            lng={item.lng}
-                            position={position}
-                        />
-                     ))
+        <PointMap
+            id={item.id}
+            key={item.id}
+            lat={item.lat}
+            lng={item.lng}
+            parcours={item.parcours_id}
+            position={position}
+        />
+    ))
+
+
+
+    const map = (<Map className="map" center={position} zoom={base.zoom} >
+                    <TileLayer attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
+
+                    {pointMap}
+
+                </Map>)
+
+    const test = L.Routing.control({
+        waypoint: [
+            L.latLng(50.669303, 4.620818),
+            L.latLng(50.669199, 4.620844)
+        ]
+    })
 
             return (
                 <Fragment>
-                    <Map className="map" center={position} zoom={base.zoom}>
-                        <TileLayer attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
-
-                        {pointMap}
-
-                    </Map>
+                    {map}
                 </Fragment>
             )
 }

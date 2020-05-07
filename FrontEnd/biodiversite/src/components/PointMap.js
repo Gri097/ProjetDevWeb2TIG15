@@ -3,35 +3,35 @@ import {Marker, Popup} from "react-leaflet";
 import L from "leaflet";
 
 
-    var iconParcoursDuCyclotron = L.icon({
+    const iconParcoursDuCyclotron = L.icon({
         iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
         iconSize:[25, 41],
         iconAnchor:[12.5, 41],
         popupAnchor: [0, -41],
     });
 
-    var iconParcoursDesSciences = L.icon({
+    const iconParcoursDesSciences = L.icon({
         iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
         iconSize:[25, 41],
         iconAnchor:[12.5, 41],
         popupAnchor: [0, -41],
     });
 
-    var iconParcoursDuLac = L.icon({
+    const iconParcoursDuLac = L.icon({
         iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
         iconSize:[25, 41],
         iconAnchor:[12.5, 41],
         popupAnchor: [0, -41],
     });
 
-    var iconParcoursDuJardinBotanique = L.icon({
+    const iconParcoursDuJardinBotanique = L.icon({
         iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
         iconSize:[25, 41],
         iconAnchor:[12.5, 41],
         popupAnchor: [0, -41],
     });
 
-    var iconParcoursDuMoulinsart = L.icon({
+    const iconParcoursDuMoulinsart = L.icon({
         iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
         iconSize:[25, 41],
         iconAnchor:[12.5, 41],
