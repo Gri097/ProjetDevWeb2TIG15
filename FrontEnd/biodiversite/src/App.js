@@ -29,9 +29,38 @@ function App(){
 //className="App"
     return (
         <div className="App">
-            <NavBar></NavBar>
+            <Router>
 
+                <div className="outer">
+                    <NavBar/>
 
+                    <div className="inner">
+                        <Route path="/" exact component={Acceuil}/>
+                        <Route path="/parcours" exact component={Parcours}/>
+                        <Route path="/pointBio" exact component={PointsBios}/>
+
+                        {pointsBios.map(item => (
+                            <Route path={`/pointBio/${item.id}`}
+                                   exact component={(props) => <PointBioDetail {...props}
+                                                                               id={item.id}
+                                                                               nomFranc={item.nomFr}
+                                                                               nomScien={item.nomSc}
+                                                                               famille={item.famille_id}
+                                                                               parcours={item.parcours_id}
+                                                                               numParcours={item.numeroParcours}
+                                                                               remarquable={item.ecorceRemarquable}
+                                                                               lat={item.lat}
+                                                                               lng={item.lng}
+                            />}
+                                   key={item.id}
+                            />
+                        ))}
+
+                        <Route path="/compte" exact component={MonCompte}/>
+                    </div>
+                </div>
+
+            </Router>
         </div>
     );
 
