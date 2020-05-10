@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 
 class PointBio extends Component {
 
+
     state = {
         show: false
     }
@@ -16,6 +17,23 @@ class PointBio extends Component {
     }
 
     render() {
+
+        const inlineStyle = {
+            color:'red',
+            display:'inline-block',
+            border : '1px solid #1c9237',
+            marginRight :'10px',
+            padding: '10px 10px 10px 10px',
+            marginBottom :'10px',
+            width : '300px',
+            height: 'auto',
+            backgroundColor:'#d39e00'
+        }
+        const parcoursSciences = {}
+        const parcoursCyclotron = {}
+        const parcoursLac = {}
+        const parcoursJardinBotanique = {}
+        const parcoursParcMoulinsart = {}
 
      /*
          Ici on regarde si le state show est true ou false --> pour afficher le détail ou non
@@ -57,23 +75,23 @@ class PointBio extends Component {
                                     ):
                                         (<li className="list-group-item">Inconnue </li>)
                                 ): null
-
+//<button onClick={this.montrerPoint} className="pointBioButton"> </button>
         return (
-            <div>
+            <div style={inlineStyle} className=" ">
                 <h4>
                     <Link to={`/pointBio/${this.props.id}`} style={{textDecoration:'none', color:'black'}}>
                         {this.props.nomScien}&nbsp; {/* Permet de faire un espace */}
                     </Link>
 
-                    <button onClick={this.montrerPoint} className="pointBioButton"> </button>
-                </h4>
 
-                <ul className="list-group">
+                </h4>
+                {this.state.show ? (<ul  className="list-group">
                     {nomFrancais}
                     {infoFamille}
                     {infoParcours}
                     <li className="list-group-item" >Numéro du parcours: {this.props.numParcours}</li>
-                </ul>
+                </ul>) : null}
+
 
 
 
