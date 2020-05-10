@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
 
-
 class PointBio extends Component {
 
 
@@ -17,23 +16,25 @@ class PointBio extends Component {
     }
 
     render() {
-
+        const h4Style = {
+            fontsize: '5px',
+        }
         const inlineStyle = {
-            color:'red',
             display:'inline-block',
-            border : '1px solid #1c9237',
+            border : '2px solid black',
             marginRight :'10px',
-            padding: '10px 10px 10px 10px',
+            marginLeft:'10px',
+            padding: '10px 10px 3px 10px',
             marginBottom :'10px',
             width : '300px',
             height: 'auto',
-            backgroundColor:'#d39e00'
+            backgroundColor:'#17a2b8',
         }
-        const parcoursSciences = {}
-        const parcoursCyclotron = {}
-        const parcoursLac = {}
-        const parcoursJardinBotanique = {}
-        const parcoursParcMoulinsart = {}
+        const parcoursSciences = {backgroundColor:'#d39e00'}
+        const parcoursCyclotron = {backgroundColor:'#bd2130'}
+        const parcoursLac = {backgroundColor:'#17a2b8'}
+        const parcoursJardinBotanique = {backgroundColor:'#28a745'}
+        const parcoursParcMoulinsart = {backgroundColor:'#BA55D3'}
 
      /*
          Ici on regarde si le state show est true ou false --> pour afficher le détail ou non
@@ -77,23 +78,11 @@ class PointBio extends Component {
                                 ): null
 //<button onClick={this.montrerPoint} className="pointBioButton"> </button>
         return (
-            <div style={inlineStyle} className=" ">
-                <h4>
-                    <Link to={`/pointBio/${this.props.id}`} style={{textDecoration:'none', color:'black'}}>
-                        {this.props.nomScien}&nbsp; {/* Permet de faire un espace */}
+            <div style={inlineStyle}>
+
+                    <Link to={`/pointBio/${this.props.id}`} style={{textDecoration:'none',color:'black'}}>
+                        <h5>{this.props.nomScien}&nbsp; {/* Permet de faire un espace */}</h5>
                     </Link>
-
-
-                </h4>
-                {this.state.show ? (<ul  className="list-group">
-                    {nomFrancais}
-                    {infoFamille}
-                    {infoParcours}
-                    <li className="list-group-item" >Numéro du parcours: {this.props.numParcours}</li>
-                </ul>) : null}
-
-
-
 
             </div>
         );
@@ -101,3 +90,11 @@ class PointBio extends Component {
 }
 
 export default PointBio;
+/*
+{this.state.show ? (<ul  className="list-group">
+                    {nomFrancais}
+                    {infoFamille}
+                    {infoParcours}
+                    <li className="list-group-item" >Numéro du parcours: {this.props.numParcours}</li>
+                </ul>) : null}
+ */

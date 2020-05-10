@@ -23,8 +23,8 @@ function PointsBios(){
 return(
 
     <Fragment>
-        <h2 style={{textAlign:"center"}}>Points Biodiversités disponibles</h2>
-
+        <h2 style={{textAlign:"center"}}>Points Biodiversités disponibles</h2><br/>
+        <h5>Parcours des Sciences: </h5><br/>
         {pointsBios.map(item => (
             <PointBio
                 id={item.id}
