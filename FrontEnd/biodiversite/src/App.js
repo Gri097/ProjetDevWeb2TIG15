@@ -9,7 +9,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import 'leaflet/dist/leaflet.css';
 import axios from "axios";
-//import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import NavBar from "./components/NavBar";
 
 function App(){
 
@@ -25,10 +26,21 @@ function App(){
 
 
 
-
+//className="App"
     return (
         <div className="App">
-            <Router>
+            <NavBar></NavBar>
+
+
+        </div>
+    );
+
+}
+
+export default App;
+/*
+
+<Router>
 
                 <div className="outer">
                     <Navigation/>
@@ -60,11 +72,4 @@ function App(){
                 </div>
 
             </Router>
-
-
-        </div>
-    );
-
-}
-
-export default App;
+* */

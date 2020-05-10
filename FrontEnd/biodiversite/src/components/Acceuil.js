@@ -32,6 +32,7 @@ function Acceuil() {
             key={item.id}
             lat={item.lat}
             lng={item.lng}
+            nomScien={item.nomSc}
             parcours={item.parcours_id}
             position={position}
         />
