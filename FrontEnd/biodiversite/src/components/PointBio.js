@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import {Link} from "react-router-dom";
 
 class PointBio extends Component {
-
-
     state = {
         show: false
     }
@@ -14,7 +12,6 @@ class PointBio extends Component {
             show: !this.state.show
         })
     }
-
     render() {
         const h4Style = {
             fontsize: '5px',
