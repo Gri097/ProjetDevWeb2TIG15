@@ -7,7 +7,7 @@ coaching libre : choix en amont des points à réevaluer
 - compte user db pour l'utiliser dans django
 - roles user story (user, qu'est qu'un utilisateur, un admin, .. ?)                    ---OK---
 - expliquer les liens de l'a us 1 (catégories : acceuil, parcours, etc, ça mène ou ?)  ---OK---
-- us 1 modifier ligne 5 (retirer design)																					     ---OK---
+- us 1 modifier ligne 5 (retirer design)												                       ---OK---
 - us 1 simplement voir la carte (but de l'us)																					 ---OK---
 - us 2 simplement voir le détail de la carte																					 ---OK---
 - us 2 noter ressource api 																														 ---OK---
