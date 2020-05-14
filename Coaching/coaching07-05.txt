@@ -5,16 +5,17 @@ coaching libre : choix en amont des points à réevaluer
 
 
 - compte user db pour l'utiliser dans django
-- roles user story (user, qu'est qu'un utilisateur, un admin, .. ?)
-- expliquer les liens de l'a us 1 (catégories : acceuil, parcours, etc, ça mène ou ?)
-- us 1 modifier ligne 5 (retirer design)
-- us 1 simplement voir la carte (but de l'us)
-- us 2 simplement voir le détail de la carte
-- us 2 noter ressource api 
-- us 2 détail spécifié que la description du point sera développer plus tard
-- us 11 plus important (priorité)
+- roles user story (user, qu'est qu'un utilisateur, un admin, .. ?)                    ---OK---
+- expliquer les liens de l'a us 1 (catégories : acceuil, parcours, etc, ça mène ou ?)  ---OK---
+- us 1 modifier ligne 5 (retirer design)																							 ---OK---
+- us 1 simplement voir la carte (but de l'us)																					 ---OK---
+- us 2 simplement voir le détail de la carte																					 ---OK---
+- us 2 noter ressource api 																														 ---OK---
+- us 2 détail spécifié que la description du point sera développer plus tard 					 ---OK---
+- us 11 plus important (priorité)																											 ---OK---
 
 - créer un branche perso sur github
+- Cheker la grille d'évaluation !!
 
 semaine pro
 - bien expliquer l'utilisation de react dans notre projet 
@@ -23,7 +24,7 @@ backend:
 - documenation : description en 1 ou 2 ligne, ne pas devoir "execute"
 
 trello :
--assigner
+-assigner les tâches 																																	 ---OK---
 
 
 //pas obligé 
