@@ -2,3 +2,30 @@ Créer des utilisateur pour la bdd
 firebase pour le https 
 liste de toutes les technologies ainsi que leurs versions (date - version)
 coaching libre : choix en amont des points à réevaluer  
+
+
+- compte user db pour l'utiliser dans django
+- roles user story (user)
+- expliquer les liens de l'a us 1 (catégories
+- us 1 modifier ligne 5
+- us 1 simplement voir la carte
+- us 2 simplement voir le détail de la carte
+- us 2 ressource api ? 
+- us 2 détail point spécifié qu'il est vide
+- us 11 plus important (priorité)
+
+- branche github
+
+semaine pro
+- bien expliquer l'utilisation de react dans notre projet 
+
+backend:
+- documenation : description en 1 ou 2 ligne, ne pas devoir "execute"
+
+trello :
+-assigner
+
+
+//pas obligé 
+clockify :
+-grouper par catégorie de travaille (Backend, Frontend, API, ..)
