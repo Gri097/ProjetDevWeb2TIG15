@@ -1,21 +1,21 @@
-CrÈer des utilisateur pour la bdd
+Cr√©er des utilisateur pour la bdd
 firebase pour le https 
 liste de toutes les technologies ainsi que leurs versions (date - version)
-coaching libre : choix en amont des points ‡ rÈevaluer  
+coaching libre : choix en amont des points √† r√©evaluer  
 
 
 - compte user db pour l'utiliser dans django
 - roles user story (user, qu'est qu'un utilisateur, un admin, .. ?)                    ---OK---
-- expliquer les liens de l'a us 1 (catÈgories : acceuil, parcours, etc, Áa mËne ou ?)  ---OK---
-- us 1 modifier ligne 5 (retirer design)																							 ---OK---
+- expliquer les liens de l'a us 1 (cat√©gories : acceuil, parcours, etc, √ßa m√®ne ou ?)  ---OK---
+- us 1 modifier ligne 5 (retirer design)																					     ---OK---
 - us 1 simplement voir la carte (but de l'us)																					 ---OK---
-- us 2 simplement voir le dÈtail de la carte																					 ---OK---
+- us 2 simplement voir le d√©tail de la carte																					 ---OK---
 - us 2 noter ressource api 																														 ---OK---
-- us 2 dÈtail spÈcifiÈ que la description du point sera dÈvelopper plus tard 					 ---OK---
-- us 11 plus important (prioritÈ)																											 ---OK---
+- us 2 d√©tail sp√©cifi√© que la description du point sera d√©velopper plus tard 		       ---OK---
+- us 11 plus important (priorit√©)																											 ---OK---
 
-- crÈer un branche perso sur github
-- Cheker la grille d'Èvaluation !!
+- cr√©er un branche perso sur github
+- Cheker la grille d'√©valuation !!
 
 semaine pro
 - bien expliquer l'utilisation de react dans notre projet 
@@ -24,9 +24,9 @@ backend:
 - documenation : description en 1 ou 2 ligne, ne pas devoir "execute"
 
 trello :
--assigner les t‚ches 																																	 ---OK---
+-assigner les t√¢ches 																																	 ---OK---
 
 
-//pas obligÈ 
+//pas oblig√© 
 clockify :
--grouper par catÈgorie de travaille (Backend, Frontend, API, ..)
+-grouper par cat√©gorie de travaille (Backend, Frontend, API, ..)
