@@ -5,16 +5,16 @@ coaching libre : choix en amont des points à réevaluer
 
 
 - compte user db pour l'utiliser dans django
-- roles user story (user)
-- expliquer les liens de l'a us 1 (catégories
-- us 1 modifier ligne 5
-- us 1 simplement voir la carte
+- roles user story (user, qu'est qu'un utilisateur, un admin, .. ?)
+- expliquer les liens de l'a us 1 (catégories : acceuil, parcours, etc, ça mène ou ?)
+- us 1 modifier ligne 5 (retirer design)
+- us 1 simplement voir la carte (but de l'us)
 - us 2 simplement voir le détail de la carte
-- us 2 ressource api ? 
-- us 2 détail point spécifié qu'il est vide
+- us 2 noter ressource api 
+- us 2 détail spécifié que la description du point sera développer plus tard
 - us 11 plus important (priorité)
 
-- branche github
+- créer un branche perso sur github
 
 semaine pro
 - bien expliquer l'utilisation de react dans notre projet 
