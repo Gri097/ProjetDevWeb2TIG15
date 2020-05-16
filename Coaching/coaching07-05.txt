@@ -4,7 +4,7 @@ liste de toutes les technologies ainsi que leurs versions (date - version)
 coaching libre : choix en amont des points à réevaluer  
 
 
-- compte user db pour l'utiliser dans django
+- compte user db pour l'utiliser dans django																					 ---OK---
 - roles user story (user, qu'est qu'un utilisateur, un admin, .. ?)                    ---OK---
 - expliquer les liens de l'a us 1 (catégories : acceuil, parcours, etc, ça mène ou ?)  ---OK---
 - us 1 modifier ligne 5 (retirer design)												                       ---OK---
@@ -14,6 +14,7 @@ coaching libre : choix en amont des points à réevaluer
 - us 2 détail spécifié que la description du point sera développer plus tard 		       ---OK---
 - us 11 plus important (priorité)																											 ---OK---
 
+- dans l'arbre de la db, expliquer aussi les tables de django (utiles)
 - créer un branche perso sur github
 - Cheker la grille d'évaluation !!
 
