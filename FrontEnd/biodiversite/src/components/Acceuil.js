@@ -47,13 +47,15 @@ function Acceuil() {
                     {pointMap}
 
                 </Map>)
-
+    /*
     const test = L.Routing.control({
-        waypoint: [
-            L.latLng(50.669303, 4.620818),
-            L.latLng(50.669199, 4.620844)
-        ]
-    })
+            waypoint: [
+                L.latLng(50.669303, 4.620818),
+                L.latLng(50.669199, 4.620844)
+            ]
+        })
+    */
+
 
             return (
                 <Fragment>

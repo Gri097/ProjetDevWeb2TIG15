@@ -1,9 +1,9 @@
 import React, { useEffect, useState} from 'react';
 import Parcours from "./components/Parcours";
 import Acceuil from "./components/Acceuil";
-import Navigation from "./components/Nav";
 import MonCompte from "./components/monCompte";
-import PointsBios from "./components/PointsBios";
+//import PointsBios from "./components/PointsBios";
+import PointsBios from "./components/PointsBiodiversites/PointsBios";
 import PointBioDetail from "./components/pointBioDetail";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
