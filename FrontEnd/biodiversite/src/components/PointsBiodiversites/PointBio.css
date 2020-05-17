@@ -1,19 +1,21 @@
 
-.science {
-    display: inline-block;
-    border : 2px solid black;
-    margin : 15px 10px 0px 10px;
-    padding: 0px 5px 0px 10px;
-    width : 300px;
-    height: auto;
-    background-color: #d39e00;
-}
+
+
 .cyclotron {
     display: inline-block;
     border : 2px solid black;
     margin : 15px 10px 0px 10px;
     padding: 0px 5px 0px 10px;
-    width : 300px;
+    width : 250px;
+    height: auto;
+    background-color: #d39e00;
+}
+.science {
+    display: inline-block;
+    border : 2px solid black;
+    margin : 15px 10px 0px 10px;
+    padding: 0px 5px 0px 10px;
+    width : 250px;
     height: auto;
     background-color: #bd2130;
 }
@@ -22,7 +24,7 @@
     border : 2px solid black;
     margin : 15px 10px 0px 10px;
     padding: 0px 5px 0px 10px;
-    width : 300px;
+    width : 250px;
     height: auto;
     background-color: #17a2b8;
 }
@@ -31,7 +33,7 @@
     border : 2px solid black;
     margin : 15px 10px 0px 10px;
     padding: 0px 5px 0px 10px;
-    width : 300px;
+    width : 250px;
     height: auto;
     background-color: #28a745;
 }
@@ -40,7 +42,18 @@
     border : 2px solid black;
     margin : 15px 10px 0px 10px;
     padding: 0px 5px 0px 10px;
-    width : 300px;
+    width : 250px;
     height: auto;
     background-color: #BA55D3;
+}
+@media all and (max-width : 600px) {
+    .science {
+        display: inline-block;
+        border : 2px solid black;
+        margin : 15px 10px 0px 10px;
+        padding: 0px 5px 0px 10px;
+        width : 300px;
+        height: auto;
+        background-color: white;
+    }
 }
