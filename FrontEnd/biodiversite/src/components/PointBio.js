@@ -13,17 +13,16 @@ class PointBio extends Component {
         })
     }
     render() {
+        console.log(this.props);
         const h4Style = {
             fontsize: '5px',
         }
         const inlineStyle = {
             display:'inline-block',
             border : '2px solid black',
-            marginRight :'10px',
-            marginLeft:'10px',
-            padding: '10px 10px 3px 10px',
-            marginBottom :'10px',
-            width : '300px',
+            margin :'15px 10px 0px 10px',
+            padding: '0px 5px 0px 10px',
+            width : '250px',
             height: 'auto',
             backgroundColor:'#17a2b8',
         }
@@ -78,7 +77,7 @@ class PointBio extends Component {
             <div style={inlineStyle}>
 
                     <Link to={`/pointBio/${this.props.id}`} style={{textDecoration:'none',color:'black'}}>
-                        <h5>{this.props.nomScien}&nbsp; {/* Permet de faire un espace */}</h5>
+                        <h5 style={{fontSize:'18px', margin:'5px 5px 5px 5px'}}>{this.props.nomScien}&nbsp; {/* Permet de faire un espace */}</h5>
                     </Link>
 
             </div>
