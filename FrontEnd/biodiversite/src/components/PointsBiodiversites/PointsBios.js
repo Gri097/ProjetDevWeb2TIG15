@@ -1,6 +1,6 @@
 import React, {Fragment, Component} from "react";
 import { Tab, Tabs } from 'react-mdl';
-import PointBio from "../PointBio";
+import PointBio from "./PointBio";
 
 
 class PointsBios extends Component{
