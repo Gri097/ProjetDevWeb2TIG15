@@ -21,6 +21,7 @@ coaching libre : choix en amont des points à réevaluer
 
 semaine pro
 - bien expliquer l'utilisation de react dans notre projet 
+- version de chaque ressource utilisé
 
 backend:
 - documenation : description en 1 ou 2 ligne, ne pas devoir "execute" (--> statique)
