@@ -13,7 +13,9 @@ coaching libre : choix en amont des points à réevaluer
 - us 2 noter ressource api								 ---OK---
 - us 2 détail spécifié que la description du point sera développer plus tard 	 ---OK---
 - us 11 plus important (priorité)							 ---OK---
+>>>>>>> master
 
+- dans l'arbre de la db, expliquer aussi les tables de django (utiles)
 - créer un branche perso sur github
 - Cheker la grille d'évaluation !!
 

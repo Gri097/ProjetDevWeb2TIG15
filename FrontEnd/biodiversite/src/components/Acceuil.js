@@ -4,7 +4,7 @@ import PointMap from './PointMap';
 import { Map, TileLayer } from 'react-leaflet';
 import './Acceuil.css';
 import 'leaflet-routing-machine';
-import L from 'leaflet';
+import MyMap from './Map/Map'
 
 function Acceuil() {
 
@@ -59,7 +59,7 @@ function Acceuil() {
 
             return (
                 <Fragment>
-                    {map}
+                    {MyMap}
                 </Fragment>
             )
 }

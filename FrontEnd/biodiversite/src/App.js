@@ -11,6 +11,7 @@ import 'leaflet/dist/leaflet.css';
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import NavBar from "./components/NavBar";
+import map from './components/Map/Map'
 
 function App(){
 
@@ -35,7 +36,7 @@ function App(){
                     <NavBar/>
 
                     <div className="inner">
-                        <Route path="/" exact component={Acceuil}/>
+                        <Route path="/" exact component={map}/>
                         <Route path="/parcours" exact component={Parcours}/>
                         <Route path="/pointBio" exact component={PointsBios}/>
 

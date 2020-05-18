@@ -1,6 +1,6 @@
 import React, {Fragment, Component} from "react";
 import { Tab, Tabs } from 'react-mdl';
-import PointBio from "../PointBio";
+import PointBio from "./PointBio";
 
 
 class PointsBios extends Component{
@@ -31,7 +31,9 @@ class PointsBios extends Component{
     toggleCategories(){
         if(this.state.activeTab === 0){
             return(
-                <div>{this.state.pointsBios.map(item => (
+
+                <div><h4>Parcours du Cyclotron</h4>
+                    {this.state.pointsBios.map(item => (
                     item.parcours_id === 1 ?(<PointBio
                         id={item.id}
                         key={item.id}
@@ -50,7 +52,8 @@ class PointsBios extends Component{
         }else if(this.state.activeTab === 1){
             return(
 
-                <div>{this.state.pointsBios.map(item => (
+                <div><h4>Parcours des Sciences</h4>
+                    {this.state.pointsBios.map(item => (
                     item.parcours_id === 2 ?(<PointBio
                         id={item.id}
                         key={item.id}
@@ -68,7 +71,8 @@ class PointsBios extends Component{
             )
         }else if(this.state.activeTab === 2){
             return(
-                <div>{this.state.pointsBios.map(item => (
+                <div><h4>Parcours du Lac</h4>
+                    {this.state.pointsBios.map(item => (
                     item.parcours_id === 3 ?(<PointBio
                         id={item.id}
                         key={item.id}
@@ -86,7 +90,8 @@ class PointsBios extends Component{
             )
         }else if(this.state.activeTab === 3){
             return(
-                <div>{this.state.pointsBios.map(item => (
+                <div><h4>Parcours du Jardin Botanique</h4>
+                    {this.state.pointsBios.map(item => (
                     item.parcours_id === 4 ?(<PointBio
                         id={item.id}
                         key={item.id}
@@ -104,7 +109,8 @@ class PointsBios extends Component{
             )
         }else if(this.state.activeTab === 4){
             return(
-                <div>{this.state.pointsBios.map(item => (
+                <div><h4>Parcours du Parc Moulinsart</h4>
+                    {this.state.pointsBios.map(item => (
                     item.parcours_id === 5 ?(<PointBio
                         id={item.id}
                         key={item.id}
@@ -125,7 +131,7 @@ class PointsBios extends Component{
     }
 
     render() {
-        console.log(this.state);
+
         return(
             <Fragment>
                 <div className="category-tabs">
@@ -134,7 +140,7 @@ class PointsBios extends Component{
                         <Tab>Parcours Des Sciences</Tab>
                         <Tab>Parcours Du Lac</Tab>
                         <Tab>Parcours Du Jardin Botanique</Tab>
-                        <Tab>Parcours Du Moulinsart</Tab>
+                        <Tab>Parcours Du Parc Moulinsart</Tab>
                     </Tabs>
 
                     <section className="projects-grid">
