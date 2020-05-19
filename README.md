@@ -1,5 +1,8 @@
 # ProjetDevWeb2TIG15
 
+## Installation  :
+(à Modifier)
+
 Pour lancer le serveur backend :
 
 Etape 1) 
