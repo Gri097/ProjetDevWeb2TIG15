@@ -1,8 +1,8 @@
 import React, { useEffect, useState} from 'react';
-import Parcours from "./components/Parcours";
-import MonCompte from "./components/monCompte";
+import Parcours from "./components/Parcours/Parcours";
+import Compte from "./components/Compte/Compte";
 import PointsBios from "./components/PointsBiodiversites/PointsBios";
-import PointBioDetail from "./components/PointsBiodiversites/pointBioDetail";
+import PointBioDetail from "./components/PointsBiodiversites/PointBioDetails";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import 'leaflet/dist/leaflet.css';
@@ -55,7 +55,7 @@ function App(){
                             />
                         ))}
 
-                        <Route path="/compte" exact component={MonCompte}/>
+                        <Route path="/compte" exact component={Compte}/>
                     </div>
                 </div>
 
