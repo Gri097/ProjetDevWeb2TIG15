@@ -139,11 +139,11 @@ export default class Map extends Component {
                 latlngsPM.push(item._latlng)
             })
 
-        let polygonSc = L.polygon(latlngsSc, {color: 'yellow'}).addTo(this.map)
-        let polygonCy = L.polygon(latlngsCy, {color: 'red'}).addTo(this.map)
-        let polygonLac = L.polygon(latlngsLac, {color: 'blue'}).addTo(this.map)
-        let polygonJb = L.polygon(latlngsJB, {color: 'green'}).addTo(this.map)
-        let polygonPM = L.polygon(latlngsPM, {color: 'violet'}).addTo(this.map)
+        let polygonSc = L.polygon(latlngsSc, {color: 'yellow'})
+        let polygonCy = L.polygon(latlngsCy, {color: 'red'})
+        let polygonLac = L.polygon(latlngsLac, {color: 'blue'})
+        let polygonJb = L.polygon(latlngsJB, {color: 'green'})
+        let polygonPM = L.polygon(latlngsPM, {color: 'violet'})
 
         //---------------------------------------  AJOUT DU LAYER SUR LA CARTE -----------------------------------------------------------------//
 
@@ -161,6 +161,7 @@ export default class Map extends Component {
 
         //---------------------------------------  NOTRE LOCALISATION SUR LA CARTE -----------------------------------------------------------------//
 
+        /*
 
         this.map.locate({
             setView: true,
@@ -173,7 +174,7 @@ export default class Map extends Component {
         }).on("locationerror", error => {
             console.log("lokasyon bulunamadi");
         });
-
+        */
 
 
     }
