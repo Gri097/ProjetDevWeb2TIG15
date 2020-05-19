@@ -3,12 +3,27 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import styled from 'styled-components';
 import 'leaflet-routing-machine';
+import './map.css'
 
 
 const Wrapper = styled.div`
     width: ${props => props.width};
     height: ${props => props.height};
 `;
+//DEFAULT_ICON_CYCLOTRON
+const iconParcoursDuCyclotron = L.icon({
+    iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+    iconSize:[25, 41],
+    iconAnchor:[12.5, 41],
+    popupAnchor: [0, -41],
+});
+
+const iconParcoursDesSciences = L.icon({
+    iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
+    iconSize:[25, 41],
+    iconAnchor:[12.5, 41],
+    popupAnchor: [0, -41],
+});
 
 const iconParcoursDuLac = L.icon({
     iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
@@ -16,35 +31,183 @@ const iconParcoursDuLac = L.icon({
     iconAnchor:[12.5, 41],
     popupAnchor: [0, -41],
 });
+
+const iconParcoursDuJardinBotanique = L.icon({
+    iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+    iconSize:[25, 41],
+    iconAnchor:[12.5, 41],
+    popupAnchor: [0, -41],
+});
+
+const iconParcoursDuMoulinsart = L.icon({
+    iconUrl:'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+    iconSize:[25, 41],
+    iconAnchor:[12.5, 41],
+    popupAnchor: [0, -41],
+});
+
 export default class Map extends Component {
 
+    state = {
+        pointsBios : [],
+        sciences : [],
+        cyclotron : [],
+        lac : [],
+        jb : [],
+        parcM : []
+    }
 
-    componentDidMount() {
-        this.map = L.map('map', {
-            center: [50.665662, 4.609721],
-            zoom : 15
+    async componentDidMount() {
+
+        //--------------------------------------- APPEL API -----------------------------------------------------------------//
+        const url = 'http://10.0.1.82:8000/api/pointBiodiversite/?format=json';
+        const response = await fetch(url);
+        const data = await response.json();
+        this.state.pointsBios = data;
+
+
+        //--------------------------------------- INITIALISATION DE LA MAP -----------------------------------------------------------------//
+        this.map = L.map('map').setView([50.665662, 4.609721],15);
+
+        const mainLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+            attribution: '&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        })
+        mainLayer.addTo(this.map)
+        const OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+        });
+        const Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
         });
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-            attribution: '&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(this.map);
+        //--------------------------------------- AJOUT DES POINTS SUR LA CARTE -----------------------------------------------------------------//
 
-        L.marker([50.669303,4.620818], {icon:iconParcoursDuLac}).addTo(this.map).bindPopup('A pretty CSS3 popup. <br> Easily customizable.');
-        L.marker( [50.660592, 4.607940], {icon:iconParcoursDuLac}).addTo(this.map).bindPopup('A pretty CSS3 popup. <br> Easily customizable.');
+        this.state.pointsBios.map(item => (
+            item.lat != null ?
+            (item.parcours_id ===1 ?
 
-        L.Routing.control({
-            waypoint: [
-                L.latLng(50.669303,4.620818),
-                L.latLng(50.660592, 4.607940)
-            ],
-            routeWhileDragging: true
+                this.state.sciences.push(L.marker([item.lat, item.lng], {icon: iconParcoursDesSciences})
+                    .bindPopup("<a  href="+`/pointBio/${item.id}`+" > Nom scientifique " + item.nomSc + "</a> <br /> Id : "+ item.id)
+                    .addTo(this.map)) :
+
+                (item.parcours_id === 2 ?
+
+                        this.state.cyclotron.push(L.marker([item.lat, item.lng], {icon: iconParcoursDuCyclotron})
+                            .bindPopup("<a  href="+`/pointBio/${item.id}`+" > Nom scientifique " + item.nomSc + "</a> <br /> Id : "+ item.id)
+                            .addTo(this.map)) :
+
+                    (item.parcours_id === 3 ?
+
+                            this.state.lac.push(L.marker([item.lat, item.lng], {icon: iconParcoursDuLac})
+                                .bindPopup("<a  href="+`/pointBio/${item.id}`+" > Nom scientifique " + item.nomSc + "</a> <br /> Id : "+ item.id)
+                                .addTo(this.map)):
+
+                        (item.parcours_id === 4 ?
+
+                                this.state.jb.push(L.marker([item.lat, item.lng], {icon: iconParcoursDuJardinBotanique})
+                                    .bindPopup("<a  href="+`/pointBio/${item.id}`+" > Nom scientifique " + item.nomSc + "</a> <br /> Id : "+ item.id)
+                                    .addTo(this.map)) :
+
+                                this.state.parcM.push(L.marker([item.lat, item.lng], {icon: iconParcoursDuMoulinsart})
+                                    .bindPopup("<a  href="+`/pointBio/${item.id}`+" > Nom scientifique " + item.nomSc + "</a> <br /> Id : "+ item.id)
+                                    .addTo(this.map)))))) : null
+        ))
+
+
+        //--------------------------------------- AJOUT DES PARCOURS SUR LA CARTE  -----------------------------------------------------------------//
+        const latlngsSc = [];
+        const latlngsCy = [];
+        const latlngsLac = [];
+        const latlngsJB = [];
+        const latlngsPM = [];
+
+
+            this.state.sciences.map(item => {
+                latlngsSc.push(item._latlng)
+            })
+            this.state.cyclotron.map(item => {
+                latlngsCy.push(item._latlng)
+            })
+            this.state.lac.map(item => {
+                latlngsLac.push(item._latlng)
+            })
+            this.state.jb.map(item => {
+                latlngsJB.push(item._latlng)
+            })
+            this.state.parcM.map(item => {
+                latlngsPM.push(item._latlng)
+            })
+
+        let polygonSc = L.polygon(latlngsSc, {color: 'yellow'}).addTo(this.map)
+        let polygonCy = L.polygon(latlngsCy, {color: 'red'}).addTo(this.map)
+        let polygonLac = L.polygon(latlngsLac, {color: 'blue'}).addTo(this.map)
+        let polygonJb = L.polygon(latlngsJB, {color: 'green'}).addTo(this.map)
+        let polygonPM = L.polygon(latlngsPM, {color: 'violet'}).addTo(this.map)
+
+        //---------------------------------------  AJOUT DU LAYER SUR LA CARTE -----------------------------------------------------------------//
+
+        L.control.layers({
+            'Principal': mainLayer,
+            'Satellite' : Esri_WorldImagery,
+            'autre': OpenStreetMap_HOT
+        },{
+            'Parcours des Sciences': polygonSc,
+            'Parcours du cyclotron': polygonCy,
+            'Parcours du lac': polygonLac,
+            'Parcours du jardin botanique': polygonJb,
+            'Parcours du parc de Moulinsart': polygonPM,
         }).addTo(this.map)
+
+        //---------------------------------------  NOTRE LOCALISATION SUR LA CARTE -----------------------------------------------------------------//
+
+
+        this.map.locate({
+            setView: true,
+            maxZoom: 120
+        }).on("locationfound", e => {
+            var radius = e.accuracy / 2;
+            L.marker([e.latitude, e.longitude], {icon :iconParcoursDuMoulinsart}).addTo(this.map)
+                .bindPopup("Vous êtes ici! à " + radius + " m près :/ ").openPopup();
+            L.circle(e.latlng, radius).addTo(this.map);
+        }).on("locationerror", error => {
+            console.log("lokasyon bulunamadi");
+        });
+
+
 
     }
 
     render() {
         return (
-            <Wrapper height="730px" id="map"/>
+            <div className="carte">
+                <Wrapper height="730px" id="map"/>
+            </div>
+
         )
     }
 }
+/*
+
+    const geolocationButton = L.control({position: 'topleft'});
+        geolocationButton.onAdd = (mapRef) => {
+            var button = L.DomUtil.create('button', 'geolocalisatio-button')
+            button.innerHTML = 'Locate';
+            button.onClick = () => {
+                mapRef.locate();
+                button.disabled = true;
+                mapRef.on('locationfound', (locEvent) => {
+                    var radius = locEvent.accuracy * 5
+                    var point = locEvent.latlng
+                    mapRef.setView(point, 16)
+                    button.disabled = false;
+                    L.circle(point, radius).addTo(mapRef).bindPopup("Vous êtes ici").openPopup()
+                })
+                mapRef.on('locationerror', (err) => {
+                    button.disabled = false;
+                })
+            }
+            return button;
+        }
+        geolocationButton.addTo(this.map);
+    */

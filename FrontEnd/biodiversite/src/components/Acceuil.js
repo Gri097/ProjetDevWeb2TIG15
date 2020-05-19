@@ -4,7 +4,8 @@ import PointMap from './PointMap';
 import { Map, TileLayer } from 'react-leaflet';
 import './Acceuil.css';
 import 'leaflet-routing-machine';
-import MyMap from './Map/Map'
+import mapp from './Map/Map'
+import L from "leaflet";
 
 function Acceuil() {
 
@@ -38,8 +39,6 @@ function Acceuil() {
         />
     ))
 
-
-
     const map = (<Map className="map" center={position} zoom={base.zoom} >
                     <TileLayer attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
@@ -56,10 +55,9 @@ function Acceuil() {
         })
     */
 
-
             return (
                 <Fragment>
-                    {MyMap}
+                    {map}
                 </Fragment>
             )
 }
