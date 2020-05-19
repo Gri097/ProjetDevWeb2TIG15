@@ -5,6 +5,14 @@ import './PointBio.css';
 import logoVert from '../../images/logo-vert.png';
 import logoRouge from '../../images/logo-rouge.png';
 
+
+const utile = <div style={{textAlign:'center'}}>
+                <img src={logoVert} alt="Logo-vert" style={{width:'30px'}}/>
+                <p style={{display:'inline-block', color:'#808000',marginRight:'10px'}}>Disponible</p>
+                <img src={logoRouge} alt="Logo-Rouge" style={{width:'30px'}}/>
+                <p style={{display:'inline-block', color:'#bd2130'}}>Indisponible</p>
+            </div>
+
 class PointsBios extends Component{
 
     state = {
@@ -30,18 +38,16 @@ class PointsBios extends Component{
         this.state.parcours = dataParcours;
     }
 
+
+
     toggleCategories(){
+        this.componentDidMount();
+
         if(this.state.activeTab === 0){
             return(
 
                 <div><h4>Parcours des Sciences</h4>
-                    <div style={{textAlign:'center'}}>
-                        <img src={logoVert} alt="Logo-vert" style={{width:'30px'}}/>
-                        <p style={{display:'inline-block', color:'#808000',marginRight:'10px'}}>Disponible</p>
-                        <img src={logoRouge} alt="Logo-Rouge" style={{width:'30px'}}/>
-                        <p style={{display:'inline-block', color:'#bd2130'}}>Indisponible</p>
-                    </div>
-
+                    {utile}
 
                     {this.state.pointsBios.map(item => (
                     item.parcours_id === 1 ?(<PointBio
@@ -63,8 +69,7 @@ class PointsBios extends Component{
             return(
 
                 <div><h4>Parcours du Cyclotron</h4>
-                    <div className="titleVert"><img src={logoVert} alt="Logo-vert" style={{width:'30px'}}/>   Disponible</div>
-                    <div className="titleRouge"><img src={logoRouge} alt="Logo-vert" style={{width:'30px'}}/>   Indisponible</div>
+                    {utile}
                     {this.state.pointsBios.map(item => (
                     item.parcours_id === 2 ?(<PointBio
                         id={item.id}
@@ -84,8 +89,7 @@ class PointsBios extends Component{
         }else if(this.state.activeTab === 2){
             return(
                 <div><h4>Parcours du Lac</h4>
-                    <div className="titleVert"><img src={logoVert} alt="Logo-vert" style={{width:'30px'}}/>   Disponible</div>
-                    <div className="titleRouge"><img src={logoRouge} alt="Logo-vert" style={{width:'30px'}}/>   Indisponible</div>
+                    {utile}
                     {this.state.pointsBios.map(item => (
                     item.parcours_id === 3 ?(<PointBio
                         id={item.id}
@@ -105,8 +109,7 @@ class PointsBios extends Component{
         }else if(this.state.activeTab === 3){
             return(
                 <div><h4>Parcours du Jardin Botanique</h4>
-                    <div className="titleVert"><img src={logoVert} alt="Logo-vert" style={{width:'30px'}}/>   Disponible</div>
-                    <div className="titleRouge"><img src={logoRouge} alt="Logo-vert" style={{width:'30px'}}/>   Indisponible</div>
+                    {utile}
                     {this.state.pointsBios.map(item => (
                     item.parcours_id === 4 ?(<PointBio
                         id={item.id}
@@ -126,8 +129,7 @@ class PointsBios extends Component{
         }else if(this.state.activeTab === 4){
             return(
                 <div><h4>Parcours du Parc Moulinsart</h4>
-                    <div className="titleVert"><img src={logoVert} alt="Logo-vert" style={{width:'30px'}}/>   Disponible</div>
-                    <div className="titleRouge"><img src={logoRouge} alt="Logo-vert" style={{width:'30px'}}/>   Indisponible</div>
+                    {utile}
                     {this.state.pointsBios.map(item => (
                     item.parcours_id === 5 ?(<PointBio
                         id={item.id}
@@ -149,7 +151,6 @@ class PointsBios extends Component{
     }
 
     render() {
-
         return(
             <Fragment>
                 <div className="category-tabs">
@@ -163,6 +164,7 @@ class PointsBios extends Component{
 
                     <section className="projects-grid">
                         {this.toggleCategories()}
+
                     </section>
 
 

@@ -1,10 +1,8 @@
 import React, { useEffect, useState} from 'react';
 import Parcours from "./components/Parcours";
-import Acceuil from "./components/Acceuil";
 import MonCompte from "./components/monCompte";
-//import PointsBios from "./components/PointsBios";
 import PointsBios from "./components/PointsBiodiversites/PointsBios";
-import PointBioDetail from "./components/pointBioDetail";
+import PointBioDetail from "./components/PointsBiodiversites/pointBioDetail";
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import 'leaflet/dist/leaflet.css';
