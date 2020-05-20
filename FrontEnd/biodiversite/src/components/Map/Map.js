@@ -60,7 +60,7 @@ export default class Map extends Component {
     async componentDidMount() {
 
         //--------------------------------------- APPEL API -----------------------------------------------------------------//
-        const url = 'http://10.0.1.82:8000/api/pointBiodiversite/?format=json';
+        const url = 'http://localhost:8000/api/pointBiodiversite/?format=json';
         const response = await fetch(url);
         const data = await response.json();
         this.state.pointsBios = data;
