@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import { List, ListItem, ListItemText } from '@material-ui/core/';
 import Button from '@material-ui/core/Button';
+import { createMuiTheme } from "@material-ui/core/styles";
 
 export class Confirm extends Component {
     continue = e => {
@@ -19,8 +20,9 @@ export class Confirm extends Component {
         const {
             values: { firstName, lastName, email}
         } = this.props;
+        const theme = createMuiTheme();
         return (
-            <MuiThemeProvider>
+            <MuiThemeProvider theme={theme}>
                 <>
 
                         <List>

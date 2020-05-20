@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import { createMuiTheme } from "@material-ui/core/styles";
 
 export class FormPersonalDetails extends Component {
     continue = e => {
@@ -16,8 +17,9 @@ export class FormPersonalDetails extends Component {
 
     render() {
         const { values, handleChange } = this.props;
+        const theme = createMuiTheme();
         return (
-            <MuiThemeProvider>
+            <MuiThemeProvider theme={theme}>
                 <>
 
                         <TextField

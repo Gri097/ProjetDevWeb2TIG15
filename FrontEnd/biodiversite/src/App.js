@@ -11,7 +11,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import NavBar from "./components/NavBar";
 import map from './components/Map/Map';
 import UserForm from './components/Formulaire/UserFrom';
-import MonCompte from "./components/Compte/Compte";
 
 function App(){
 
@@ -57,7 +56,7 @@ function App(){
                             />
                         ))}
 
-                        <Route path="/compte" exact component={MonCompte}/>
+                        <Route path="/compte" exact component={Compte}/>
                         <Route path="/inscription" exact component={UserForm}/>
                     </div>
                 </div>
