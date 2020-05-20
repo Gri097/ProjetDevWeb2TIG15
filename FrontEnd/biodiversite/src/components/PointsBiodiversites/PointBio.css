@@ -1,59 +1,41 @@
+h4{
+    text-align: center;
+}
+.buttonVert{
+    border: none;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    background-color: transparent;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 5px 0px 5px 0px;
+    margin-bottom: 5px;
+}
+.img{
+    width: 30px;
+}
+.laptopButton {
+    alignment: center;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px black;
+    margin : 15px 10px 5px 10px;
+    padding: 0px 5px 0px 10px;
+    width : 250px;
+    height: auto;
+    /*background: linear-gradient(to right, #67b26b, #4ca2cb) !important;*/
+    background-color: #808000; /*8B0000*/
+}
 
-
-
-.cyclotron {
-    display: inline-block;
-    border : 2px solid black;
-    margin : 15px 10px 0px 10px;
-    padding: 0px 5px 0px 10px;
-    width : 250px;
-    height: auto;
-    background-color: #d39e00;
-}
-.science {
-    display: inline-block;
-    border : 2px solid black;
-    margin : 15px 10px 0px 10px;
-    padding: 0px 5px 0px 10px;
-    width : 250px;
-    height: auto;
-    background-color: #bd2130;
-}
-.lac {
-    display: inline-block;
-    border : 2px solid black;
-    margin : 15px 10px 0px 10px;
-    padding: 0px 5px 0px 10px;
-    width : 250px;
-    height: auto;
-    background-color: #17a2b8;
-}
-.jb {
-    display: inline-block;
-    border : 2px solid black;
-    margin : 15px 10px 0px 10px;
-    padding: 0px 5px 0px 10px;
-    width : 250px;
-    height: auto;
-    background-color: #28a745;
-}
-.parcM {
-    display: inline-block;
-    border : 2px solid black;
-    margin : 15px 10px 0px 10px;
-    padding: 0px 5px 0px 10px;
-    width : 250px;
-    height: auto;
-    background-color: #BA55D3;
-}
 @media all and (max-width : 600px) {
-    .science {
-        display: inline-block;
-        border : 2px solid black;
-        margin : 15px 10px 0px 10px;
-        padding: 0px 5px 0px 10px;
-        width : 300px;
+    .buttonVert{
+        font-size: 16px;
+    }
+    #phoneButton{
+        margin : 15px 5px 0px 5px;
+        padding: 0px 10px 0px 5px;
+        width : 46%;
         height: auto;
-        background-color: white;
     }
 }

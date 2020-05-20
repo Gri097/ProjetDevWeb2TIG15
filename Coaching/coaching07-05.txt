@@ -15,9 +15,9 @@ coaching libre : choix en amont des points à réevaluer
 - us 11 plus important (priorité)							 ---OK---
 >>>>>>> master
 
-- dans l'arbre de la db, expliquer aussi les tables de django (utiles)
-- créer un branche perso sur github
-- Cheker la grille d'évaluation !!
+- dans l'arbre de la db, expliquer aussi les tables de django (utiles)			 ---OK---
+- créer un branche perso sur github							 ---OK---
+- Cheker la grille d'évaluation !!							 ---OK---
 
 semaine pro
 - bien expliquer l'utilisation de react dans notre projet 
@@ -26,12 +26,3 @@ semaine pro
 backend:
 - documenation : description en 1 ou 2 ligne, ne pas devoir "execute" (--> statique)
 - Choix mysql
-- montrer plus de tables
-
-trello :
--assigner les tâches									 ---OK---
-
-
-//pas obligé 
-clockify :
--grouper par catégorie de travaille (Backend, Frontend, API, ..)

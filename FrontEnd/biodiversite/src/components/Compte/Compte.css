@@ -1,0 +1,12 @@
+h1.title{
+    font-size: 30px;
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+    font-family: "Times New Roman", Times, serif;
+}
+p.content{
+    font-size: 18px;
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+    font-family: "Times New Roman", Times, serif;
+}
