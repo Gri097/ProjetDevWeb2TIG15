@@ -82,7 +82,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_arbres_remarquables', #db_arbres_remarquables 
-        'USER': 'root',
+        'USER': 'mysql_user',
         'PASSWORD': 'password',
         'HOST': '127.0.0.1',
         'PORT': '3306',
