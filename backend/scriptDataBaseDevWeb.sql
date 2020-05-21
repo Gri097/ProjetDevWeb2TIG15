@@ -13,10 +13,10 @@ insert into parcours values (5, 'Parcours du parc de Moulinsart');
 /*Parcours des Sciences */
 insert into pointBio values (1, "Salix alba cv. tristis","",1,1,1,1, 50.669303,4.620818);
 insert into pointBio values (2, "Acer pensylvanicum","",2,1,2,1, 50.669199, 4.620844);
-insert into pointBio values (3,"Cupressus Sempervirens","",3,1,null,1,null,null);
+insert into pointBio values (3,"Cupressus Sempervirens","",3,0,null,1,null,null);
 insert into pointBio values (4,"Carya illinonensis","",4,1,null,1, 50.669722, 4.621585);
 insert into pointBio values (5, "Taxus baccata","",5,1,null,1, 50.669494, 4.621766);
-insert into pointBio values (6, "Picea omorika","",6,1,null,1,null,null);
+insert into pointBio values (6, "Picea omorika","",6,0,null,1,null,null);
 insert into pointBio values (7, "Ulmus minor","",7,1,null,1, 50.669299,4.622075);
 insert into pointBio values (8, "Acer capillipes","",8,1,2,1, 50.668921,4.622273);
 insert into pointBio values (9, "Quercus robur cv. fastigiata","",9,1,3,1, 50.668846,4.622309);
@@ -32,13 +32,13 @@ insert into pointBio values (18, "Populus nigra subsp. pyramidalis", "", 18, 1, 
 insert into pointBio values (19, "Robinia pseudoacacia cv. Frisia", "", 19, 1, null, 1, 50.666781,4.622288);
 insert into pointBio values (20, "Robinia pseudoacacia", "Robinier faux-acacia", 20, 1, null, 1, 50.666506,4.622540);
 insert into pointBio values (21, "Sorbus aucuparia", " ", 21, 1, null, 1, 50.665647,4.621641);
-insert into pointBio values (22, "Ginkgo biloba", " ", 22, 1, null, 1,null,null);
+insert into pointBio values (22, "Ginkgo biloba", " ", 22, 0, null, 1,null,null);
 insert into pointBio values (23, "Crataegus crus-galli", " ", 23, 1, null, 1, 50.665508, 4.621451);
 insert into pointBio values (24, "Sequoiadendron giganteum", " ", 24, 1, null, 1, 50.665421, 4.621282);
 insert into pointBio values (25, "Alnus incana", " ", 25, 1, null, 1, 50.665188, 4.621086);
 insert into pointBio values (26, "Tilia tomentosa", " ", 26, 1, null, 1, 50.665438, 4.621006);
 insert into pointBio values (27, "Tilia mongolica", " ", 27, 1, null, 1, 50.665710, 4.620810);
-insert into pointBio values (28, "Tilia cordata", " ", 28, 1, null, 1,null,null);
+insert into pointBio values (28, "Tilia cordata", " ", 28, 0, null, 1,null,null);
 insert into pointBio values (29, "Zelkova serrata", " ", 29, 1, null, 1, 50.665418, 4.620442);
 insert into pointBio values (30, "Populus x interamericana cv. UNAL", " ", 30, 1,  null, 1, 50.665071, 4.620126);
 insert into pointBio values (31, "Fagus sylvatica cv. laciniata", " ", 31, 1, null, 1, 50.665499, 4.620185);
@@ -50,20 +50,20 @@ insert into pointBio values (36, "Liquidambar styraciflua", "Copalme d'Amérique
 insert into pointBio values (37, "Acer platanoides", " ", 37, 1, 2 , 1, 50.666451, 4.619638);
 insert into pointBio values (38, "Acer campestre", " ", 38, 1, 2, 1, 50.666978, 4.619667);
 insert into pointBio values (39, "Betula nigra cv. Héritage", " ", 39, 1, null, 1, 50.666915, 4.619495);
-insert into pointBio values (40, "Betula pendula", "Bouleau verruqueux", 40, 1, null, 1,null,null);
-insert into pointBio values (41, "Pinus nigra ssp. Nigricans", " ", 41, 1, null, 1,null,null);
-insert into pointBio values (42, "Pinus nigra ssp. Nigricans", " ", 42, 1, null, 1,null,null);
+insert into pointBio values (40, "Betula pendula", "Bouleau verruqueux", 40, 0, null, 1,null,null);
+insert into pointBio values (41, "Pinus nigra ssp. Nigricans", " ", 41, 0, null, 1,null,null);
+insert into pointBio values (42, "Pinus nigra ssp. Nigricans", " ", 42, 0, null, 1,null,null);
 insert into pointBio values (43, "Pinus nigra ssp. Nigricans", " ", 43, 1, null, 1, 50.666822, 4.618967);
-insert into pointBio values (44, "Liriodendron tulipifera cv. aureomarginatum", " ", 44, 1, null, 1,null,null);
+insert into pointBio values (44, "Liriodendron tulipifera cv. aureomarginatum", " ", 44, 0, null, 1,null,null);
 insert into pointBio values (45, "Quercus macrocarpa", " ", 45, 1, 3, 1, 50.666919, 4.618769);
-insert into pointBio values (46, "Platanus x acerifolia", " ", 46, 1,  null, 1,null,null);
+insert into pointBio values (46, "Platanus x acerifolia", " ", 46, 0,  null, 1,null,null);
 insert into pointBio values (47, "Sorbus aria", " ", 47, 1, null, 1, 50.668369, 4.618694);
 
 /*Parcours du cyclotron*/
 insert into pointBio values (48, "Carpinus betulus cv. fastigiata", "", 1, 1,  null, 2, 50.666331, 4.623486);
 insert into pointBio values (49, "Acer negundo", "", 2, 1, 2 , 2, 50.666532, 4.623501);
 insert into pointBio values (50, "Aesculus hippocastanum", "", 3, 1,  null, 2, 50.666551, 4.623756);
-insert into pointBio values (51, "Acer palmatum cv. dissectum 'Filigree'", "", 4, 1,  2, 2, null, null);
+insert into pointBio values (51, "Acer palmatum cv. dissectum 'Filigree'", "", 4, 0,  2, 2, null, null);
 insert into pointBio values (52, "Ailanthus glandulosa", "", 5, 1,  null, 2, 50.666396, 4.624387);
 insert into pointBio values (53, "Tilia tomentosa", "", 6, 1,  null, 2, 50.666339, 4.624095);
 insert into pointBio values (54, "Catalpa bignonioides", "", 7, 1,  null, 2, 50.666232, 4.624090);
@@ -178,5 +178,5 @@ insert into pointBio values (156, "Aesculus x carnea", "", 2, 1,  null, 5, 50.66
 insert into pointBio values (157, "Ulmus minor", "", 3, 1,  null, 5, 50.660710, 4.608406);
 insert into pointBio values (158, "Sequoiadendron giganteum", "", 4, 1,  null, 5, 50.660592, 4.607940);
 insert into pointBio values (159, "Quercus dentata cv. yunnanensis", "", 5, 1,  3, 5, 50.660998, 4.607538);
-insert into pointBio values (160, "Robinia pseudoacacia", "Robinier faux-acacia", 6, 1,  null, 5, 50.660983, 4.606725des );
+insert into pointBio values (160, "Robinia pseudoacacia", "Robinier faux-acacia", 6, 1,  null, 5, 50.660983, 4.606725 );
 

@@ -9,7 +9,8 @@ import 'leaflet/dist/leaflet.css';
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import NavBar from "./components/NavBar";
-import map from './components/Map/Map'
+import map from './components/Map/Map';
+import UserForm from './components/Formulaire/UserFrom';
 
 function App(){
 
@@ -17,7 +18,7 @@ function App(){
 
     useEffect(() => {
         const fetchData = async () => {
-            const pointsBiosAPI = await axios('http://10.0.1.82:8000/api/pointBiodiversite/?format=json');
+            const pointsBiosAPI = await axios('http://localhost:8000/api/pointBiodiversite/?format=json');
             setPointsBios(pointsBiosAPI.data);
         };
         fetchData();
@@ -56,6 +57,7 @@ function App(){
                         ))}
 
                         <Route path="/compte" exact component={Compte}/>
+                        <Route path="/inscription" exact component={UserForm}/>
                     </div>
                 </div>
 

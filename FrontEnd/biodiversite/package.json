@@ -13,6 +13,7 @@
     "error-ex": "git+https://github.com/Qix-/node-error-ex.git",
     "leaflet": "^1.6.0",
     "leaflet-routing-machine": "^3.2.12",
+    "material-ui": "^0.20.2",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",

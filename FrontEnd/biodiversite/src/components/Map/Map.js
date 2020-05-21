@@ -60,7 +60,7 @@ export default class Map extends Component {
     async componentDidMount() {
 
         //--------------------------------------- APPEL API -----------------------------------------------------------------//
-        const url = 'http://10.0.1.82:8000/api/pointBiodiversite/?format=json';
+        const url = 'http://localhost:8000/api/pointBiodiversite/?format=json';
         const response = await fetch(url);
         const data = await response.json();
         this.state.pointsBios = data;
@@ -161,8 +161,8 @@ export default class Map extends Component {
 
         //---------------------------------------  NOTRE LOCALISATION SUR LA CARTE -----------------------------------------------------------------//
 
-        /*
 
+/*
         this.map.locate({
             setView: true,
             maxZoom: 120
@@ -174,15 +174,36 @@ export default class Map extends Component {
         }).on("locationerror", error => {
             console.log("lokasyon bulunamadi");
         });
-        */
+*/
 
+        const geolocationButton = L.control({position: 'topleft'});
+        geolocationButton.onAdd = (mapRef) => {
+            var button = L.DomUtil.create('button', 'geolocalisatio-button')
+            button.innerHTML = 'Locate';
+            button.onClick = () => {
+                mapRef.locate();
+                button.disabled = true;
+                mapRef.on('locationfound', (locEvent) => {
+                    var radius = locEvent.accuracy * 5
+                    var point = locEvent.latlng
+                    mapRef.setView(point, 16)
+                    button.disabled = false;
+                    L.circle(point, radius).addTo(mapRef).bindPopup("Vous êtes ici").openPopup()
+                })
+                mapRef.on('locationerror', (err) => {
+                    button.disabled = false;
+                })
+            }
+            return button;
+        }
+        geolocationButton.addTo(this.map);
 
     }
 
     render() {
         return (
             <div className="carte">
-                <Wrapper height="730px" id="map"/>
+                <Wrapper height="90vh" id="map"/>
             </div>
 
         )

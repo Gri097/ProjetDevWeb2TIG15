@@ -23,6 +23,7 @@ class NavBar extends Component {
                         <ReactBootStrap.Nav>
 
                                 <ReactBootStrap.Nav.Link   href="/compte">Mon Compte</ReactBootStrap.Nav.Link>
+                                <ReactBootStrap.Nav.Link   href="/inscription">Inscription</ReactBootStrap.Nav.Link>
 
                         </ReactBootStrap.Nav>
                     </ReactBootStrap.Navbar.Collapse>
