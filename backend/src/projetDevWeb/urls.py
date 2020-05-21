@@ -24,5 +24,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('api/', include('biodiversite.api.urls')),
-    path('',schema_view),
+    path('api/doc',schema_view),
 ]
