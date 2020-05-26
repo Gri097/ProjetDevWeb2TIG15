@@ -1,20 +1,16 @@
-# ProjetDevWeb2TIG15
+# Projet Développement Web
 
-## Installation  :
-(à Modifier)
+### Note Application : « **Biodiversité LLN** »
 
-Pour lancer le serveur backend :
+### Développé avec :
 
-Etape 1) 
+* Django (python)
+* Reactjs 
+* MySQL
 
-Se trouver dans le path "ProjetDevWeb2TIG/backend"
+### Team :
 
-Etape 2)
+* Castermane Robin
+* Cotton Victor
+* Vandervelden Igor
 
-Insérez les commandes suivantes dans l'odre :
-
-- source env/bin/activate
-- cd src/
-- python3 manage.py runserver
-
-À cette étape le serveur devrait se lancer sans problème.
