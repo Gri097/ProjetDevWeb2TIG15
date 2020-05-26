@@ -28,8 +28,8 @@ class PointBioDetails extends Component {
     }
 
     async componentDidMount(){
-        const urlFamily = 'http://localhost:8000/api/famille/?format=json';
-        const urlRoute = 'http://localhost:8000/api/parcours/?format=json';
+        const urlFamily = 'http://10.0.1.82:8000/api/famille/?format=json';
+        const urlRoute = 'http://10.0.1.82:8000/api/parcours/?format=json';
 
         const responseFamily = await fetch(urlFamily);
         const responseRoute = await fetch(urlRoute);

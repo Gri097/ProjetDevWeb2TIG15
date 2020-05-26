@@ -12,3 +12,6 @@ npm install --save react-tabs
  npm install react-geolocated
 material-ui
 
+ npm install -g serve
+  serve -s build
+

@@ -22,8 +22,8 @@ class PointsBios extends Component{
         activeTab : 0
     }
     async componentDidMount(){
-        const url = 'http://localhost:8000/api/pointBiodiversite/?format=json';
-        const parcoursAPI = 'http://localhost:8000/api/parcours/?format=json';
+        const url = 'http://10.0.1.82:8000/api/pointBiodiversite/?format=json';
+        const parcoursAPI = 'http://10.0.1.82:8000/api/parcours/?format=json';
 
         const response = await fetch(url);
         const responseParcours = await fetch(parcoursAPI);
