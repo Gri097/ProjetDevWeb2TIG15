@@ -27,15 +27,20 @@ h4{
     /*background: linear-gradient(to right, #67b26b, #4ca2cb) !important;*/
     background-color: #808000; /*8B0000*/
 }
-
+.loading{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
 @media all and (max-width : 600px) {
-    .buttonVert{
+    .buttonVert {
         font-size: 16px;
     }
-    #phoneButton{
-        margin : 15px 5px 0px 5px;
+
+    #phoneButton {
+        margin: 15px 5px 0px 5px;
         padding: 0px 10px 0px 5px;
-        width : 46%;
+        width: 46%;
         height: auto;
     }
 }
