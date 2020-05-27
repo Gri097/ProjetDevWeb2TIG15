@@ -62,6 +62,19 @@ export default class Map extends Component {
         return this.state.parcours[item-1].nom;
     };
 
+    locate = () => {
+        this.map.locate({
+            setView: true,
+            maxZoom: 120
+        }).on("locationfound", e => {
+            var radius = e.accuracy / 2;
+            L.marker([e.latitude, e.longitude], {icon :iconParcoursDuMoulinsart}).addTo(this.map)
+                .bindPopup("Vous êtes ici! à " + radius + " m près :/ ").openPopup();
+            L.circle(e.latlng, radius).addTo(this.map);
+        }).on("locationerror", error => {
+            console.log("lokasyon bulunamadi");
+        });
+    };
 
 
     async componentDidMount() {
@@ -176,50 +189,11 @@ export default class Map extends Component {
 
         //---------------------------------------  NOTRE LOCALISATION SUR LA CARTE -----------------------------------------------------------------//
 
+        L.marker([50.669451, 4.610565], {icon: iconParcoursDuCyclotron}).openPopup()
+            .on('click', this.locate)
+            .addTo(this.map)
+            .bindPopup("** Appuyez ici pour vous localiser **").openPopup()
 
-/*
-        this.map.locate({
-            setView: true,
-            maxZoom: 120
-        }).on("locationfound", e => {
-            var radius = e.accuracy / 2;
-            L.marker([e.latitude, e.longitude], {icon :iconParcoursDuMoulinsart}).addTo(this.map)
-                .bindPopup("Vous êtes ici! à " + radius + " m près :/ ").openPopup();
-            L.circle(e.latlng, radius).addTo(this.map);
-        }).on("locationerror", error => {
-            console.log("lokasyon bulunamadi");
-        });
-*/
-
-
-
-
-        const geolocationButton = L.control({position: 'topleft'});
-        geolocationButton.onAdd = (mapRef) => {
-            const button = L.DomUtil.create('button', 'geolocalisatio-button')
-            button.innerHTML = 'Locate';
-            button.onClick = () => {
-                console.log("test")
-            }
-            return button;
-        }
-        geolocationButton.addTo(this.map);
-
-
-        /*
-        mapRef.locate();
-                button.disabled = true;
-                mapRef.on('locationfound', (locEvent) => {
-                    var radius = locEvent.accuracy * 5
-                    var point = locEvent.latlng
-                    mapRef.setView(point, 16)
-                    button.disabled = false;
-                    L.circle(point, radius).addTo(mapRef).bindPopup("Vous êtes ici").openPopup()
-                })
-                mapRef.on('locationerror', (err) => {
-                    button.disabled = false;
-                })
-         */
     }
 
     render() {
