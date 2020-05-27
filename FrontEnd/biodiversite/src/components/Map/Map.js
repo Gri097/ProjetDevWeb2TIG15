@@ -50,6 +50,7 @@ export default class Map extends Component {
 
     state = {
         pointsBios : [],
+        parcours : [],
         sciences : [],
         cyclotron : [],
         lac : [],
@@ -57,13 +58,25 @@ export default class Map extends Component {
         parcM : []
     }
 
+    getRoute = (item) => {
+        return this.state.parcours[item-1].nom;
+    };
+
+
+
     async componentDidMount() {
 
         //--------------------------------------- APPEL API -----------------------------------------------------------------//
-        const url = 'http://10.0.1.82:8000/api/pointBiodiversite/?format=json';
-        const response = await fetch(url);
-        const data = await response.json();
-        this.state.pointsBios = data;
+        const urlPoint = 'http://10.0.1.82:8000/api/pointBiodiversite/?format=json';
+        const response = await fetch(urlPoint);
+        const dataPoint = await response.json();
+
+        const urlRoute = 'http://10.0.1.82:8000/api/parcours/?format=json';
+        const responseRoute = await fetch(urlRoute)
+        const dataRoute = await responseRoute.json();
+
+        this.state.pointsBios = dataPoint;
+        this.state.parcours = dataRoute;
 
 
         //--------------------------------------- INITIALISATION DE LA MAP -----------------------------------------------------------------//
@@ -83,34 +96,36 @@ export default class Map extends Component {
 
         //--------------------------------------- AJOUT DES POINTS SUR LA CARTE -----------------------------------------------------------------//
 
+
         this.state.pointsBios.map(item => (
+
             item.lat != null ?
             (item.parcours_id ===1 ?
 
                 this.state.sciences.push(L.marker([item.lat, item.lng], {icon: iconParcoursDesSciences})
-                    .bindPopup("<a  href="+`/pointBio/${item.id}`+" > Nom scientifique " + item.nomSc + "</a> <br /> Id : "+ item.id)
+                    .bindPopup("<a  href="+`/pointBio/${item.id}`+" > " + item.id +") "+ item.nomSc + "</a> <br /> Parcours : "+ this.getRoute(item.parcours_id))
                     .addTo(this.map)) :
 
                 (item.parcours_id === 2 ?
 
                         this.state.cyclotron.push(L.marker([item.lat, item.lng], {icon: iconParcoursDuCyclotron})
-                            .bindPopup("<a  href="+`/pointBio/${item.id}`+" > Nom scientifique " + item.nomSc + "</a> <br /> Id : "+ item.id)
+                            .bindPopup("<a  href="+`/pointBio/${item.id}`+" > " + item.id +") "+ item.nomSc + "</a> <br /> Parcours : "+ this.getRoute(item.parcours_id))
                             .addTo(this.map)) :
 
                     (item.parcours_id === 3 ?
 
                             this.state.lac.push(L.marker([item.lat, item.lng], {icon: iconParcoursDuLac})
-                                .bindPopup("<a  href="+`/pointBio/${item.id}`+" > Nom scientifique " + item.nomSc + "</a> <br /> Id : "+ item.id)
+                                .bindPopup("<a  href="+`/pointBio/${item.id}`+" > " + item.id +") "+ item.nomSc + "</a> <br /> Parcours : "+ this.getRoute(item.parcours_id))
                                 .addTo(this.map)):
 
                         (item.parcours_id === 4 ?
 
                                 this.state.jb.push(L.marker([item.lat, item.lng], {icon: iconParcoursDuJardinBotanique})
-                                    .bindPopup("<a  href="+`/pointBio/${item.id}`+" > Nom scientifique " + item.nomSc + "</a> <br /> Id : "+ item.id)
+                                    .bindPopup("<a  href="+`/pointBio/${item.id}`+" > " + item.id +") "+ item.nomSc + "</a> <br /> Parcours : "+ this.getRoute(item.parcours_id))
                                     .addTo(this.map)) :
 
                                 this.state.parcM.push(L.marker([item.lat, item.lng], {icon: iconParcoursDuMoulinsart})
-                                    .bindPopup("<a  href="+`/pointBio/${item.id}`+" > Nom scientifique " + item.nomSc + "</a> <br /> Id : "+ item.id)
+                                    .bindPopup("<a  href="+`/pointBio/${item.id}`+" > " + item.id +") "+ item.nomSc + "</a> <br /> Parcours : "+ this.getRoute(item.parcours_id))
                                     .addTo(this.map)))))) : null
         ))
 
@@ -176,12 +191,23 @@ export default class Map extends Component {
         });
 */
 
+
+
+
         const geolocationButton = L.control({position: 'topleft'});
         geolocationButton.onAdd = (mapRef) => {
-            var button = L.DomUtil.create('button', 'geolocalisatio-button')
+            const button = L.DomUtil.create('button', 'geolocalisatio-button')
             button.innerHTML = 'Locate';
             button.onClick = () => {
-                mapRef.locate();
+                console.log("test")
+            }
+            return button;
+        }
+        geolocationButton.addTo(this.map);
+
+
+        /*
+        mapRef.locate();
                 button.disabled = true;
                 mapRef.on('locationfound', (locEvent) => {
                     var radius = locEvent.accuracy * 5
@@ -193,11 +219,7 @@ export default class Map extends Component {
                 mapRef.on('locationerror', (err) => {
                     button.disabled = false;
                 })
-            }
-            return button;
-        }
-        geolocationButton.addTo(this.map);
-
+         */
     }
 
     render() {
